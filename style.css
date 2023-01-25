@@ -1,0 +1,166 @@
+@font-face {
+  font-family: 'TrendSansW00-Four';
+  src: url('//db.onlinewebfonts.com/t/33ca94f43a53fc634323a6fe191ffd64.eot');
+  src: url('//db.onlinewebfonts.com/t/33ca94f43a53fc634323a6fe191ffd64.eot?#iefix')
+      format('embedded-opentype'),
+    url('//db.onlinewebfonts.com/t/33ca94f43a53fc634323a6fe191ffd64.woff2')
+      format('woff2'),
+    url('//db.onlinewebfonts.com/t/33ca94f43a53fc634323a6fe191ffd64.woff')
+      format('woff'),
+    url('//db.onlinewebfonts.com/t/33ca94f43a53fc634323a6fe191ffd64.ttf')
+      format('truetype'),
+    url('//db.onlinewebfonts.com/t/33ca94f43a53fc634323a6fe191ffd64.svg#TrendSansW00-Four')
+      format('svg');
+}
+
+html {
+  background-color: #ffffff;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  border: none;
+  user-select: none;
+  color: rgb(0, 48, 91);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+}
+
+.page-wrapper {
+  padding: 10px;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.main-bg {
+  opacity: 0.6;
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-width: 100vw;
+  width: auto;
+  height: 100%;
+  z-index: -1;
+}
+
+p {
+  font-family: 'raleway-semibold', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: inherit;
+}
+
+.logo {
+  display: flex;
+}
+
+.v-justify {
+  margin: auto 0;
+}
+
+.pic-logo {
+  height: 100px;
+  margin-left: -20px;
+}
+
+.word-logo {
+  height: 70px;
+  margin-left: -40px;
+}
+
+.links {
+  display: flex;
+  height: inherit;
+  gap: 40px;
+  margin-right: 20px;
+}
+
+.nav-item {
+  padding: 10px;
+  margin: auto 0;
+  font-size: 18px;
+}
+
+.gallery {
+    margin: 2vw;
+    border: 1px solid #ccc;
+    float: left;
+    width: 30vw;
+}
+
+.gallery:hover {
+  border: 1px solid;
+}
+
+.gallery img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+.center {
+  display: block;
+  margin-left: 15vw;
+  width: 100%;
+  padding: 0px;
+}
+
+.sponsor_package {
+  background-color: black;
+  padding: 80px;
+  color: white;
+}
+
+.button {
+    border: 2px solid white;
+    border-radius: 12px;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    background-color:black;
+}
+
+#title {
+  font-family: 'TrendSansW00-Four', 'arial';
+  font-size: 80px;
+  color: #000;
+  text-align: center;
+  margin-top: 120px;
+}
+
+#title2 {
+  font-family:'raleway';
+  font-size: 40px;
+  color: inherit;
+  margin: 40px;
+  text-align: center;
+  padding: 20px;
+}
+#p1 {
+  font-size: 20px;
+  color: black;
+  font-family: 'raleway-semibold', Calibri, 'Trebuchet MS', sans-serif;
+  margin-left: 15vw;
+}
