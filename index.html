@@ -14,6 +14,8 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <!-- every component goes inside this div -->
     <div class="page-wrapper">
       <header>
         <nav>
@@ -77,9 +79,25 @@
           </div>
         </nav>
       </header>
+      <main>
+        <article class="homepage slide active">
+          <section style="display: flexbox; flex-direction: column">
+            <img class="main-bg" src="img/main-bg.webp" alt="" />
+            <div id="title">UTKCC</div>
+          </section>
+        </article>
+        <article class="executives slide inactive"></article>
+        <article class="events slide inactive"></article>
+        <article class="sponsers slide inactive"></article>
+        <article class="newsletter slide inactive"></article>
+        <article class="resources slide inactive"></article>
+      </main>
 
-      <img class="main-bg" src="img/main-bg.webp" alt="" />
-      <div id="title">UTKCC</div>
+      <section>
+        <!-- join our monthly newsletter part -->
+      </section>
+
+      <footer>this is footer</footer>
     </div>
 
     <script type="text/javascript" src="app.js"></script>
