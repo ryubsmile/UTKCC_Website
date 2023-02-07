@@ -46,7 +46,7 @@ body {
 }
 
 .main-bg {
-  opacity: 0.6;
+  opacity: 0.4;
   position: absolute;
   left: 0;
   top: 0;
@@ -105,6 +105,19 @@ nav a {
   padding: 10px;
   margin: auto 0;
   font-size: 18px;
+  border-width: 2px;
+}
+
+.links .nav-item {
+  transition: border ease-in 200ms;
+}
+
+.links .nav-item:hover {
+  border-style: solid;
+  border-left: none;
+  border-right: none;
+  border-top-color: rgb(0, 48, 91);
+  border-bottom-color: rgb(0, 48, 91);
 }
 
 /* article section */
