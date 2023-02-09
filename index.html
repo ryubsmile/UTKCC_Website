@@ -14,6 +14,8 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <!-- every component goes inside this div -->
     <div class="page-wrapper">
       <header>
         <nav>
@@ -77,10 +79,46 @@
           </div>
         </nav>
       </header>
+      <main>
+        <article class="homepage slide active">
+          <section style="display: flexbox; flex-direction: column">
+            <img class="main-bg" src="img/main-bg.webp" alt="" />
+            <div id="title">UTKCC</div>
+          </section>
+        </article>
+        <article class="executives slide inactive"></article>
+        <article class="events slide inactive"></article>
+        <article class="sponsers slide inactive"></article>
+        <article class="newsletter slide inactive"></article>
+        <article class="resources slide inactive"></article>
+      </main>
 
-      <img class="main-bg" src="img/main-bg.webp" alt="" />
-      <div id="title">UTKCC</div>
+      <section>
+        <!-- join our monthly newsletter part -->
+      </section>
     </div>
+    <footer>
+      <div class="footer-wrapper">
+        <div>
+          <b>Contact Information</b>
+          <br />
+          <br />
+          General Inquiries:
+          <a href="mailto:korean.commerce@gmail.com">
+            korean.commerce@gmail.com
+          </a>
+          <br />
+          President:
+          <a id="president"></a>
+          <br />
+          Vice President:
+          <a id="vice_president"></a>
+          <br />
+          Sponsor Inquiries:
+          <a id="sponser_director"></a>
+        </div>
+      </div>
+    </footer>
 
     <script type="text/javascript" src="app.js"></script>
   </body>
