@@ -207,6 +207,77 @@ nav a {
   display: none;
 }
 
+/* FAQ section */
+.faq-heading{
+    font-size: 20px;
+    font-family:"raleway";
+    margin-left: 16vw;
+    border-bottom: #777;
+    padding: 20px 60px;
+}
+.faq-container{
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+.hr-line{
+  width: 60%;
+  margin: auto;
+  color: black;
+  
+}
+/* Style the buttons that are used to open and close the faq-page body */
+.faq-page {
+    /* background-color: #eee; */
+    font-size: 20px;
+    font-family: "raleway";
+    color: #1D1D1D;
+    cursor: pointer;
+    padding: 30px 20px;
+    width: 60%;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin: auto;
+}
+.faq-body{
+    margin: auto;
+    /* text-align: center; */
+    font-size: 20px;
+    font-family: "raleway";
+    width: 60%; 
+    padding: auto;
+    margin-bottom: 30px;
+}
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.faq-page:hover {
+    background-color: #F9F9F9;
+}
+/* Style the faq-page panel. Note: hidden by default */
+.faq-body {
+    font-size: 20px;
+    font-family: "raleway";
+    padding: 10 0px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+.faq-page:after {
+    content: '\02714';
+    /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #1D1D1D;
+    float: right;
+    margin-left: 5px
+    font-family: "raleway";
+    padding: 10 0px;
+}
+.active:after {
+    content: "\2716";
+    /* Unicode character for "minus" sign (-) */
+}
+
 /* footer section */
 
 footer {
