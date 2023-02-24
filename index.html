@@ -21,14 +21,14 @@
         <nav>
           <div class="nav-item logo">
             <a
-              href="https://www.utkcc.com/sponsers"
+              href="https://www.utkcc.com/"
               onclick="event.preventDefault()"
               class="v-justify"
             >
               <img src="img/pic-logo.webp" class="v-justify pic-logo" />
             </a>
             <a
-              href="https://www.utkcc.com/sponsers"
+              href="https://www.utkcc.com/"
               onclick="event.preventDefault()"
               class="v-justify"
             >
@@ -39,7 +39,7 @@
             <div class="nav-item exec">
               <a
                 href="https://www.utkcc.com/executive"
-                onclick="event.preventDefault()"
+                onclick="event.preventDefault(); navToPage('executive')"
               >
                 Executives
               </a>
@@ -47,7 +47,7 @@
             <div class="nav-item events">
               <a
                 href="https://www.utkcc.com/events"
-                onclick="event.preventDefault()"
+                onclick="event.preventDefault(); navToPage('events')"
               >
                 Events
               </a>
@@ -55,7 +55,7 @@
             <div class="nav-item sponsers">
               <a
                 href="https://www.utkcc.com/sponsers"
-                onclick="event.preventDefault()"
+                onclick="event.preventDefault(); navToPage('sponsers')"
               >
                 Sponsers
               </a>
@@ -63,7 +63,7 @@
             <div class="nav-item news">
               <a
                 href="https://www.utkcc.com/newsletter"
-                onclick="event.preventDefault()"
+                onclick="event.preventDefault(); navToPage('newsletter')"
               >
                 Newsletter
               </a>
@@ -71,7 +71,7 @@
             <div class="nav-item res">
               <a
                 href="https://www.utkcc.com/resources"
-                onclick="event.preventDefault()"
+                onclick="event.preventDefault(); navToPage('resources')"
               >
                 Resources
               </a>
@@ -99,27 +99,43 @@
     </div>
     <footer>
       <div class="footer-wrapper">
-        <div>
-          <b>Contact Information</b>
-          <br />
-          <br />
-          General Inquiries:
-          <a href="mailto:korean.commerce@gmail.com">
-            korean.commerce@gmail.com
-          </a>
-          <br />
-          President:
-          <a id="president"></a>
-          <br />
-          Vice President:
-          <a id="vice_president"></a>
-          <br />
-          Sponsor Inquiries:
-          <a id="sponser_director"></a>
+        <div class="footer-1st-floor">
+          <div class="footer-emails">
+            <b>Contact Information</b>
+            <br />
+            <br />
+            General Inquiries:
+            <a href="mailto:korean.commerce@gmail.com">
+              korean.commerce@gmail.com
+            </a>
+            <br />
+            President:
+            <a id="president"></a>
+            <br />
+            Vice President:
+            <a id="vice_president"></a>
+            <br />
+            Sponsor Inquiries:
+            <a id="sponser_director"></a>
+          </div>
+          <div class="footer-img-links">
+            <a
+              href="https://www.youtube.com/channel/UCN5SOY3SBfDnOq_3652dHeQ"
+              target="_blank"
+            >
+              <img src="img/yt-logo.webp" alt="yt" height="40" width="40" />
+            </a>
+            <a href="https://www.instagram.com/utkcc_/" target="_blank">
+              <img src="img/ig-logo.webp" alt="ig" height="40" width="40" />
+            </a>
+            <a href="https://www.facebook.com/groups/utkcc/" target="_blank">
+              <img src="img/fb-logo.webp" alt="fb" height="40" width="40" />
+            </a>
+          </div>
         </div>
+        <div class="footer-2nd-floor">© UTKCC. All Rights Reserved.</div>
       </div>
     </footer>
-
     <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
