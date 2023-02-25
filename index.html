@@ -29,14 +29,14 @@
           <div class="nav-item logo">
             <a
               href="https://www.utkcc.com/"
-              onclick="event.preventDefault()"
+              onclick="event.preventDefault(); navToPage('home');"
               class="v-justify"
             >
               <img src="img/pic-logo.webp" class="v-justify pic-logo" />
             </a>
             <a
               href="https://www.utkcc.com/"
-              onclick="event.preventDefault()"
+              onclick="event.preventDefault(); navToPage('home');"
               class="v-justify"
             >
               <img src="img/word-logo.webp" class="v-justify word-logo" />
@@ -46,7 +46,7 @@
             <div class="nav-item exec">
               <a
                 href="https://www.utkcc.com/executive"
-                onclick="event.preventDefault(); navToPage('executive')"
+                onclick="event.preventDefault(); navToPage('executives')"
               >
                 Executives
               </a>
@@ -148,6 +148,9 @@
                     KCC는 토론토 대학에서 다양한 분야를 공부하고 있는 학생들이
                     이끄는 단체입니다.
                   </p>
+                  <div class="glass-button" onclick="navToPage('executives');">
+                    MEET US
+                  </div>
                 </div>
               </div>
             </section>
@@ -157,6 +160,9 @@
                 <div class="text-box">
                   <div class="intro-title">EVENTS</div>
                   <p>저희가 준비한 각양각색의 이벤트들을 만나보세요!</p>
+                  <div class="glass-button" onclick="navToPage('events');">
+                    CHECK IT OUT
+                  </div>
                 </div>
               </div>
               <div class="item-right">
@@ -170,7 +176,12 @@
                 <img class="sponser-photos" src="img/home/sponser/jjin1.jpg" />
               </div>
               <div class="text-box vertical-center">
-                <div class="intro-title">SPONSERS</div>
+                <div class="wrapper">
+                  <div class="intro-title">SPONSERS</div>
+                  <div class="glass-button" onclick="navToPage('sponsers');">
+                    SEE MORE
+                  </div>
+                </div>
               </div>
               <div class="img-transition">
                 <img class="sponser-photos" src="img/home/sponser/jjin2.jpg" />
