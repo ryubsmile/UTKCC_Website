@@ -64,22 +64,46 @@ p {
   align-items: center;
 }
 
-.glass-button {
+.button-general {
   margin: auto;
   padding: 15px 50px;
   color: var(--main-theme-color);
   border: 1.8px solid var(--main-theme-color);
-  background-color: rgba(255, 255, 255, 0.06);
-  border-radius: 15px;
-  backdrop-filter: blur(5px);
   font-weight: bold;
   font-size: 13pt;
+  border-radius: 15px;
   width: fit-content;
   cursor: pointer;
 }
 
+.glass-button {
+  background-color: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(5px);
+}
+
 .glass-button:hover {
   background-color: rgba(255, 255, 255, 0.4);
+}
+
+.white-button {
+  transition: 0.2s;
+}
+
+.white-button:hover {
+  background-color: var(--main-theme-color);
+  color: white;
+}
+
+.color-button {
+  transition: 0.2s;
+  background-color: var(--main-theme-color);
+  border-color: white;
+  color: white;
+}
+
+.color-button:hover {
+  background-color: white;
+  color: var(--main-theme-color);
 }
 
 /* nav-bar and header section */
@@ -244,7 +268,7 @@ main {
   text-align: center;
 }
 
-.homepage .page-intro {
+.page-intro {
   width: 100%;
   height: min-content;
   background-color: #fff;
@@ -281,15 +305,25 @@ main {
 
 .page-intro.grid .item-left {
   width: 50%;
+  background-color: transparent;
 }
 
 .page-intro.grid .item-right {
   width: 50%;
+  background-color: transparent;
 }
 
 .page-intro .grid-img {
   width: 100%;
   margin-bottom: -5px;
+}
+
+#img-left {
+  box-shadow: 15px 15px 30px #bababa, -15px -15px 30px #ffffff;
+}
+
+#img-right {
+  box-shadow: -15px 15px 30px #bebebe, 15px -15px 30px #ffffff;
 }
 
 .page-intro.grid .text-box {
@@ -299,18 +333,9 @@ main {
   gap: 40px;
 }
 
-.page-intro.grid .glass-button {
-  transition: 0.2s;
-}
-
-.page-intro.grid .glass-button:hover {
-  background-color: var(--main-theme-color);
-  color: white;
-}
-
 .page-intro.tri-grid {
   display: flex;
-  height: 400px;
+  min-height: 500px;
   background-color: #00000099;
   justify-items: center;
 }
@@ -362,22 +387,6 @@ main {
   gap: 40px;
 }
 
-.wrapper .glass-button {
-  transition: 0.2s;
-  background-color: var(--main-theme-color);
-  border-color: white;
-  color: white;
-}
-
-.wrapper .glass-button:hover {
-  background-color: white;
-  color: var(--main-theme-color);
-}
-
-.newsletter hr.bar {
-  border: solid 1px var(--main-theme-color);
-}
-
 /* ? */
 
 #title2 {
@@ -404,7 +413,16 @@ section.newsletter {
   min-height: 300px;
 }
 
-.newsletter {
+.form-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 30px;
+}
+
+.newsletter hr.bar {
+  width: 100%;
+  border: solid 1px var(--main-theme-color);
 }
 
 /* footer section */
