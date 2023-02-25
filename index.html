@@ -5,7 +5,7 @@
     <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="WebFace Dev" />
+    <meta name="description" content="Official Website of UTKCC." />
     <link rel="stylesheet" href="style.css" />
     <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" /> -->
     <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> -->
@@ -89,14 +89,18 @@
       <main>
         <article class="homepage slide active">
           <img class="main-bg" src="img/main-bg.webp" alt="UTKCC." />
-          <section class="entry-point">
-            <div class="title-container">
+          <div class="entry-point">
+            <section class="title-container">
               <div id="title">UTKCC</div>
               <div id="motto">Be Part of a Professional Community.</div>
-            </div>
-            <div class="page-intro">
+              <div class="glass-button" onclick="scrollToAboutUs();">
+                ABOUT US
+              </div>
+            </section>
+            <!-- about us -->
+            <section class="page-intro">
               <div class="about-us">
-                <div class="about-us-text-box">
+                <div class="about-us-text-box" id="about-us-scroll-point">
                   <div class="intro-title">ABOUT US</div>
                   <p>
                     올해 16기를 맞이하는 토론토 대학교의 UTKCC는 Commerce 또는
@@ -127,9 +131,55 @@
                   </p>
                 </div>
               </div>
-            </div>
-            <div class="page-intro"></div>
-          </section>
+            </section>
+            <!-- executives -->
+            <section class="page-intro grid">
+              <div class="item-left">
+                <img
+                  class="grid-img"
+                  src="img/home/executives-2022.webp"
+                  alt="EXECUTIVES"
+                />
+              </div>
+              <div class="item-right vertical-center">
+                <div class="text-box">
+                  <div class="intro-title">EXECUTIVES</div>
+                  <p>
+                    KCC는 토론토 대학에서 다양한 분야를 공부하고 있는 학생들이
+                    이끄는 단체입니다.
+                  </p>
+                </div>
+              </div>
+            </section>
+            <!-- events -->
+            <section class="page-intro grid">
+              <div class="item-left vertical-center">
+                <div class="text-box">
+                  <div class="intro-title">EVENTS</div>
+                  <p>저희가 준비한 각양각색의 이벤트들을 만나보세요!</p>
+                </div>
+              </div>
+              <div class="item-right">
+                <img class="grid-img" src="img/home/events.png" alt="EVENTS" />
+              </div>
+            </section>
+            <!-- sponsers -->
+            <section class="page-intro tri-grid">
+              <div class="img-transition">
+                <img class="sponser-photos" src="img/home/sponser/jjin1.jpg" />
+                <img class="sponser-photos" src="img/home/sponser/jjin1.jpg" />
+              </div>
+              <div class="text-box vertical-center">
+                <div class="intro-title">SPONSERS</div>
+              </div>
+              <div class="img-transition">
+                <img class="sponser-photos" src="img/home/sponser/jjin2.jpg" />
+                <img class="sponser-photos" src="img/home/sponser/jjin2.jpg" />
+              </div>
+
+              <!-- <img class="sponser-photos" src="img/home/sponser/jjin2.jpg" /> -->
+            </section>
+          </div>
         </article>
         <article class="executives slide inactive"></article>
         <article class="events slide inactive"></article>
@@ -138,8 +188,12 @@
         <article class="resources slide inactive"></article>
       </main>
 
-      <section>
-        <!-- join our monthly newsletter part -->
+      <!-- join our monthly newsletter part -->
+      <section class="newsletter vertical-center">
+        <div class="form-box">
+          <hr class="bar" />
+          <div class="intro-title">JOIN OUR MONTHLY NEWSLETTER</div>
+        </div>
       </section>
     </div>
     <footer>

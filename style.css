@@ -15,9 +15,11 @@
 
 :root {
   --main-theme-color: #0f4c85;
+  --dark-theme-color: #00305b;
 }
 
 html {
+  scroll-behavior: smooth;
   background-color: #ffffff;
 }
 
@@ -39,7 +41,7 @@ body {
   -webkit-user-select: none;
 }
 
-/* general section */
+/* general section (frequent-usage) */
 
 .page-wrapper {
   min-height: 100vh;
@@ -54,6 +56,28 @@ p {
   font-size: 10pt;
   font-weight: 400;
   line-height: 2em;
+}
+
+.vertical-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glass-button {
+  margin: auto;
+  padding: 30px;
+  color: var(--main-theme-color);
+  border: 1.8px solid var(--main-theme-color);
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  font-weight: bold;
+  font-size: 13pt;
+}
+
+.glass-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 /* nav-bar and header section */
@@ -182,25 +206,26 @@ main {
   flex-direction: column;
   height: max-content;
   position: relative;
+  /* overflow: hidden; */
 }
 
 .homepage .main-bg {
-  opacity: 0.4;
-  min-width: 100vw;
-  width: auto;
   position: absolute;
-  left: 0;
   top: 0;
-  height: 100%;
+  left: 0;
+  opacity: 0.6;
+  max-width: 100vw;
+  min-height: 100vh;
   z-index: -1;
+  object-fit: cover;
 }
 
 .homepage .title-container {
-  padding: 120px 0 50vh;
+  padding: 120px 0 40vh;
   display: flex;
   flex-direction: column;
   gap: 30px;
-  border-bottom: black 0.3px solid;
+  /* border-bottom: black 0.3px solid; */
 }
 
 #title {
@@ -219,18 +244,17 @@ main {
 
 .homepage .page-intro {
   width: 100%;
-  min-height: 500px;
+  height: min-content;
   background-color: #fff;
 }
 
-.homepage .page-intro .intro-title {
+.intro-title {
   font-size: 30px;
   font-weight: bold;
   text-align: center;
-  padding: 40px 0;
 }
 
-.homepage .about-us {
+.page-intro .about-us {
   margin: 40px 15% 100px;
   /* border: 1px solid black; */
   border-radius: 10px;
@@ -239,9 +263,91 @@ main {
   box-shadow: 20px 20px 40px #bababa, -20px -20px 40px #ffffff;
 }
 
-.homepage .about-us-text-box {
+.page-intro .about-us-text-box {
   padding: 0 19% 100px;
   text-align: left;
+}
+
+.about-us-text-box .intro-title {
+  padding: 40px 0;
+}
+
+.page-intro.grid {
+  display: flex;
+  text-align: center;
+}
+
+.page-intro.grid .item-left {
+  width: 50%;
+}
+
+.page-intro.grid .item-right {
+  width: 50%;
+}
+
+.page-intro .grid-img {
+  width: 100%;
+  margin-bottom: -5px;
+}
+
+.page-intro.grid .text-box {
+  max-width: 70%;
+}
+
+.page-intro.grid .text-box .intro-title {
+  padding-bottom: 40px;
+}
+
+.page-intro.tri-grid {
+  display: flex;
+  height: 400px;
+  background-color: #00000099;
+  justify-items: center;
+}
+
+.page-intro.tri-grid .img-transition {
+  width: 35%;
+  overflow: hidden;
+  position: relative;
+}
+
+.page-intro.tri-grid .sponser-photos {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+  animation: 0.8s linear forwards;
+}
+
+@keyframes img-reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes img-hide {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.page-intro.tri-grid .text-box {
+  width: 30%;
+  background-color: var(--main-theme-color);
+  color: white;
+}
+
+.newsletter hr.bar {
+  border: solid 1px var(--main-theme-color);
 }
 
 /* ? */
@@ -262,11 +368,22 @@ main {
   margin-left: 15vw;
 }
 
+/* join our newsletter */
+
+section.newsletter {
+  background-color: white;
+  text-align: center;
+  min-height: 300px;
+}
+
+.newsletter {
+}
+
 /* footer section */
 
 footer {
   border-top: black 0.3px solid;
-  background-color: var(--main-theme-color);
+  background-color: var(--dark-theme-color);
   color: white;
   height: 300px;
 }
