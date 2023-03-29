@@ -157,6 +157,43 @@ nav a {
   padding: 80px;
   color: white;
   text-align: center;
+  display: inline-block;
+}
+
+.center1 {
+  text-align: center;
+}
+
+.events_page {
+  display: inline-block;
+  font-family: 'raleway-semibold';
+  font-size: 40px;
+  width: auto;
+  margin-top: 4vh;
+}
+
+.events_block {
+  width: 25vw;
+  height: auto;
+  display: inline-block;
+  text-align: center;
+}
+
+.events_page img {
+  width: 80%;
+  height: 20vw;
+  border-radius: 50%;
+}
+
+.events_page button {
+  display: inline-block;
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 15px;
+  color:rgb(0, 48, 91);
+  font-family: "raleway";
+  font-size: 20px;
+  background-color: rgb(204, 219, 233);
 }
 
 .button {
