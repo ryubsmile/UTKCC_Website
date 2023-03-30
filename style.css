@@ -125,8 +125,8 @@ nav a {
 .gallery {
   margin: 2vw;
   border: 1px solid #ccc;
-  float: left;
   width: 30vw;
+  display: inline-block;
 }
 
 .gallery:hover {
@@ -145,9 +145,7 @@ nav a {
 }
 
 .center {
-  display: inline-block;
-  margin-left: 15vw;
-  padding: 0px;
+  text-align: center;
 }
 
 .sponsor_package {
@@ -157,7 +155,7 @@ nav a {
   padding: 80px;
   color: white;
   text-align: center;
-  display: inline-block;
+  margin-top: 50px;
 }
 
 .center1 {
