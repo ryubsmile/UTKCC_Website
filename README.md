@@ -15,7 +15,7 @@ Navigate to `./events/social-events.json`. This is a JSON file which stores info
 * Adding a new social event
   1. The default (and preferred) image ratio is 1:1. Prepare this file and add to the folder `./img/events/`. 
   2. Make a dictionary with the following format:
-     ```{javascript}
+     ```js
        {
          "name": "<<put the name of the event here>>",
          "image": "./img/events/<<name of the image file>>",
@@ -25,7 +25,7 @@ Navigate to `./events/social-events.json`. This is a JSON file which stores info
      - Line breaks in here must be replaced with `<br>`s and should be written in a single line.
      - Do NOT include <<>>. Put in texts only.
   3. Append (copy and paste) to the bottom of the dictionary. Don't forget to add a `,` before the new dictionary. 
-     ```{javascript}
+     ```js
        {
          "Events": [ 
            ... other events ,
