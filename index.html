@@ -5,10 +5,17 @@
     <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="WebFace Dev" />
+    <meta name="description" content="Official Website of UTKCC." />
     <link rel="stylesheet" href="style.css" />
     <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" /> -->
     <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
     <title>UTKCC - University of Toronto Korean Commerce Community</title>
   </head>
@@ -21,15 +28,15 @@
         <nav>
           <div class="nav-item logo">
             <a
-              href="https://www.utkcc.com/sponsers"
-              onclick="event.preventDefault()"
+              href="https://www.utkcc.com/"
+              onclick="event.preventDefault(); navToPage('home');"
               class="v-justify"
             >
               <img src="img/pic-logo.webp" class="v-justify pic-logo" />
             </a>
             <a
-              href="https://www.utkcc.com/sponsers"
-              onclick="event.preventDefault()"
+              href="https://www.utkcc.com/"
+              onclick="event.preventDefault(); navToPage('home');"
               class="v-justify"
             >
               <img src="img/word-logo.webp" class="v-justify word-logo" />
@@ -39,7 +46,7 @@
             <div class="nav-item exec">
               <a
                 href="https://www.utkcc.com/executive"
-                onclick="event.preventDefault()"
+                onclick="event.preventDefault(); navToPage('executives')"
               >
                 Executives
               </a>
@@ -47,23 +54,23 @@
             <div class="nav-item events">
               <a
                 href="https://www.utkcc.com/events"
-                onclick="event.preventDefault()"
+                onclick="event.preventDefault(); navToPage('events')"
               >
                 Events
               </a>
             </div>
-            <div class="nav-item sponsers">
+            <div class="nav-item sponsors">
               <a
-                href="https://www.utkcc.com/sponsers"
-                onclick="event.preventDefault()"
+                href="https://www.utkcc.com/sponsors"
+                onclick="event.preventDefault(); navToPage('sponsors')"
               >
-                Sponsers
+                Sponsors
               </a>
             </div>
             <div class="nav-item news">
               <a
                 href="https://www.utkcc.com/newsletter"
-                onclick="event.preventDefault()"
+                onclick="event.preventDefault(); navToPage('newsletter')"
               >
                 Newsletter
               </a>
@@ -71,7 +78,7 @@
             <div class="nav-item res">
               <a
                 href="https://www.utkcc.com/resources"
-                onclick="event.preventDefault()"
+                onclick="event.preventDefault(); navToPage('resources')"
               >
                 Resources
               </a>
@@ -81,45 +88,183 @@
       </header>
       <main>
         <article class="homepage slide active">
-          <section style="display: flexbox; flex-direction: column">
-            <img class="main-bg" src="img/main-bg.webp" alt="" />
-            <div id="title">UTKCC</div>
-          </section>
+          <img class="main-bg" src="img/main-bg.webp" alt="UTKCC." />
+          <div class="entry-point">
+            <section class="title-container">
+              <div id="title">UTKCC</div>
+              <div id="motto">Be Part of a Professional Community.</div>
+              <div
+                class="button-general glass-button"
+                onclick="scrollToAboutUs();"
+              >
+                ABOUT US
+              </div>
+            </section>
+            <!-- about us -->
+            <section class="page-intro">
+              <div class="about-us">
+                <div class="about-us-text-box" id="about-us-scroll-point">
+                  <div class="intro-title">ABOUT US</div>
+                  <p>
+                    올해 16기를 맞이하는 토론토 대학교의 UTKCC는 Commerce 또는
+                    Economics를 전공하는 학생들로부터 출범하여, 2007년부터
+                    현재까지 왕성한 활동을 펼치고 있는 한인학생회입니다. 현재는
+                    다양한 기술, 여러 아이디어의 인풋과 네트워킹이 중요한 현
+                    사회에 발 맞추기 위하여 상경계 학생은 물론 다양한 전공을
+                    공부하는 학생 임원진들로 이루어져 있습니다. <br />
+                    <br />
+                    UTKCC는 #Be Part of a Professional Community, #Work Hard,
+                    Play Hard 라는 모토를 가지고 학업, 진로, 그리고 친목과 같은
+                    다방면에 초점을 둔 이벤트들을 진행하며 서로에게 큰 자산이
+                    되는 가치들과 대학생활에 맞는 맞춤형 지원을 제공하는
+                    커뮤니티입니다. 저희 임원진들은 이벤트를 위해 머리를 맞대어
+                    고민하고, 기획하며, 학업을 위해 함께 공부하고, 다양한 전공의
+                    커리어 고민들을 나누며 새로운 시각을 접하고 배워갑니다.<br />
+                    <br />
+                    또한, 지난 15년이라는 시간 동안 KCC를 거쳐가시고 국내외 사회
+                    여러 분야로 진출하신 Alumni분들로 구성된 KCCA 네트워크가
+                    형성되었습니다. KCC에 애정을 갖고 계시는 Alumni분들을 통하여
+                    학우 여러분들이 관심 있는 산업에 종사하고 계시는
+                    Alumni분들과 네트워킹하며 직종과 관련된 정보를 얻을 수 있는
+                    커피챗, 커리어 세미나, 와인 파티 등 유익한 이벤트를 제공하고
+                    있습니다. Alumni분들의 경험 및 유익한 정보들을 토대로 특정
+                    분야에 국한되지 않고 사회 각 분야를 선도할 수 있는 리더를
+                    양성하며, 여러분들의 대학 생활을 더욱 더 의미있고 윤활하게
+                    만들 수 있도록 정진하고 있습니다.
+                  </p>
+                </div>
+              </div>
+            </section>
+            <!-- executives -->
+            <section class="page-intro grid">
+              <div class="item-left">
+                <img
+                  class="grid-img"
+                  src="img/home/executives-2022.webp"
+                  alt="EXECUTIVES"
+                  id="img-left"
+                />
+              </div>
+              <div class="item-right vertical-center">
+                <div class="text-box">
+                  <div class="intro-title">EXECUTIVES</div>
+                  <p>
+                    KCC는 토론토 대학에서 다양한 분야를 공부하고 있는 학생들이
+                    이끄는 단체입니다.
+                  </p>
+                  <div
+                    class="button-general white-button glass-button"
+                    onclick="navToPage('executives');"
+                  >
+                    MEET US
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- events -->
+            <section class="page-intro grid">
+              <div class="item-left vertical-center">
+                <div class="text-box">
+                  <div class="intro-title">EVENTS</div>
+                  <p>저희가 준비한 각양각색의 이벤트들을 만나보세요!</p>
+                  <div
+                    class="button-general white-button glass-button"
+                    onclick="navToPage('events');"
+                  >
+                    CHECK IT OUT
+                  </div>
+                </div>
+              </div>
+              <div class="item-right">
+                <img
+                  class="grid-img"
+                  src="img/home/events.png"
+                  alt="EVENTS"
+                  id="img-right"
+                />
+              </div>
+            </section>
+            <!-- sponsors -->
+            <section class="page-intro tri-grid">
+              <div class="img-transition">
+                <img class="sponsor-photos" src="img/home/sponsor/jjin1.jpg" />
+                <img class="sponsor-photos" src="img/home/sponsor/jjin1.jpg" />
+              </div>
+              <div class="text-box vertical-center">
+                <div class="wrapper">
+                  <div class="intro-title">SPONSORS</div>
+                  <div
+                    class="button-general color-button"
+                    onclick="navToPage('sponsors');"
+                  >
+                    SEE MORE
+                  </div>
+                </div>
+              </div>
+              <div class="img-transition">
+                <img class="sponsor-photos" src="img/home/sponsor/jjin2.jpg" />
+                <img class="sponsor-photos" src="img/home/sponsor/jjin2.jpg" />
+              </div>
+
+              <!-- <img class="sponsor-photos" src="img/home/sponsor/jjin2.jpg" /> -->
+            </section>
+          </div>
         </article>
         <article class="executives slide inactive"></article>
         <article class="events slide inactive"></article>
-        <article class="sponsers slide inactive"></article>
+        <article class="sponsors slide inactive"></article>
         <article class="newsletter slide inactive"></article>
         <article class="resources slide inactive"></article>
       </main>
 
-      <section>
-        <!-- join our monthly newsletter part -->
+      <!-- join our monthly newsletter part -->
+      <section class="newsletter vertical-center">
+        <div class="form-box">
+          <hr class="bar" />
+          <div class="intro-title">JOIN OUR MONTHLY NEWSLETTER</div>
+          <div class="button-general white-button">GET A TASTE</div>
+        </div>
       </section>
     </div>
     <footer>
       <div class="footer-wrapper">
-        <div>
-          <b>Contact Information</b>
-          <br />
-          <br />
-          General Inquiries:
-          <a href="mailto:korean.commerce@gmail.com">
-            korean.commerce@gmail.com
-          </a>
-          <br />
-          President:
-          <a id="president"></a>
-          <br />
-          Vice President:
-          <a id="vice_president"></a>
-          <br />
-          Sponsor Inquiries:
-          <a id="sponser_director"></a>
+        <div class="footer-1st-floor">
+          <div class="footer-emails">
+            <b>Contact Information</b>
+            <br />
+            <br />
+            General Inquiries:
+            <a href="mailto:korean.commerce@gmail.com">
+              korean.commerce@gmail.com
+            </a>
+            <br />
+            President:
+            <a id="president"></a>
+            <br />
+            Vice President:
+            <a id="vice_president"></a>
+            <br />
+            Sponsor Inquiries:
+            <a id="sponsor_director"></a>
+          </div>
+          <div class="footer-img-links">
+            <a
+              href="https://www.youtube.com/channel/UCN5SOY3SBfDnOq_3652dHeQ"
+              target="_blank"
+            >
+              <img src="img/yt-logo.webp" alt="yt" height="40" width="40" />
+            </a>
+            <a href="https://www.instagram.com/utkcc_/" target="_blank">
+              <img src="img/ig-logo.webp" alt="ig" height="40" width="40" />
+            </a>
+            <a href="https://www.facebook.com/groups/utkcc/" target="_blank">
+              <img src="img/fb-logo.webp" alt="fb" height="40" width="40" />
+            </a>
+          </div>
         </div>
+        <div class="footer-2nd-floor">© UTKCC. All Rights Reserved.</div>
       </div>
     </footer>
-
     <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
