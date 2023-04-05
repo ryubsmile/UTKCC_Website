@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Official Website of UTKCC." />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" /> -->
+    <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>UTKCC - University of Toronto Korean Commerce Community</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <!-- every component goes inside this div -->
+    <div class="page-wrapper">
+      <header>
+        <nav>
+          <div class="nav-item logo">
+            <a
+              href="https://www.utkcc.com/"
+              onclick="event.preventDefault(); navToPage('home');"
+              class="v-justify"
+            >
+              <img src="img/pic-logo.webp" class="v-justify pic-logo" />
+            </a>
+            <a
+              href="https://www.utkcc.com/"
+              onclick="event.preventDefault(); navToPage('home');"
+              class="v-justify"
+            >
+              <img src="img/word-logo.webp" class="v-justify word-logo" />
+            </a>
+          </div>
+          <div class="links">
+            <div class="nav-item exec">
+              <a
+                href="https://www.utkcc.com/executive"
+                onclick="event.preventDefault(); navToPage('executives')"
+              >
+                Executives
+              </a>
+            </div>
+            <div class="nav-item events">
+              <a
+                href="https://www.utkcc.com/events"
+                onclick="event.preventDefault(); navToPage('events')"
+              >
+                Events
+              </a>
+            </div>
+            <div class="nav-item sponsors">
+              <a
+                href="https://www.utkcc.com/sponsors"
+                onclick="event.preventDefault(); navToPage('sponsors')"
+              >
+                Sponsors
+              </a>
+            </div>
+            <div class="nav-item news">
+              <a
+                href="https://www.utkcc.com/newsletter"
+                onclick="event.preventDefault(); navToPage('newsletter')"
+              >
+                Newsletter
+              </a>
+            </div>
+            <div class="nav-item res">
+              <a
+                href="https://www.utkcc.com/resources"
+                onclick="event.preventDefault(); navToPage('resources')"
+              >
+                Resources
+              </a>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <article class="events slide inactive">
+          <div class="social">
+            <div class="social-event-items">event 1</div>
+            <div class="social-event-items">event 1</div>
+            <div class="social-event-items">event 1</div>
+          </div>
+        </article>
+      </main>
+      <!-- join our monthly newsletter part -->
+      <section class="newsletter vertical-center">
+        <div class="form-box">
+          <hr class="bar" />
+          <div class="intro-title">JOIN OUR MONTHLY NEWSLETTER</div>
+          <div class="button-general white-button">GET A TASTE</div>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <div class="footer-wrapper">
+        <div class="footer-1st-floor">
+          <div class="footer-emails">
+            <b>Contact Information</b>
+            <br />
+            <br />
+            General Inquiries:
+            <a href="mailto:korean.commerce@gmail.com">
+              korean.commerce@gmail.com
+            </a>
+            <br />
+            President:
+            <a id="president"></a>
+            <br />
+            Vice President:
+            <a id="vice_president"></a>
+            <br />
+            Sponsor Inquiries:
+            <a id="sponsor_director"></a>
+          </div>
+          <div class="footer-img-links">
+            <a
+              href="https://www.youtube.com/channel/UCN5SOY3SBfDnOq_3652dHeQ"
+              target="_blank"
+            >
+              <img src="img/yt-logo.webp" alt="yt" height="40" width="40" />
+            </a>
+            <a href="https://www.instagram.com/utkcc_/" target="_blank">
+              <img src="img/ig-logo.webp" alt="ig" height="40" width="40" />
+            </a>
+            <a href="https://www.facebook.com/groups/utkcc/" target="_blank">
+              <img src="img/fb-logo.webp" alt="fb" height="40" width="40" />
+            </a>
+          </div>
+        </div>
+        <div class="footer-2nd-floor">© UTKCC. All Rights Reserved.</div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
