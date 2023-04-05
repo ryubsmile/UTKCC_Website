@@ -13,6 +13,28 @@
       format('svg');
 }
 
+/* CSS RESET */
+/* html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+} */
+
 :root {
   --main-theme-color: #0f4c85;
   --dark-theme-color: #00305b;
@@ -440,11 +462,37 @@ main {
 /* article - events */
 
 .events .social {
-  width: 90vw;
+  width: 92vw;
   margin: 10px auto 0;
   display: grid;
-  grid-template-rows: 1 1 1;
-  gap: 5vw;
+  grid-template-columns: auto auto auto;
+  gap: 4vw;
+}
+
+.social > div {
+  width: 28vw;
+  height: 70vw;
+  box-shadow: 0px 15px 30px #bebebe;
+}
+
+.social > div > img {
+  width: 28vw;
+  height: 28vw;
+  object-fit: cover;
+}
+
+.social > div > div {
+  margin: 20px;
+  color: black;
+}
+
+.social > div > div > h2 {
+  text-align: left;
+  margin: 0 0 10px;
+}
+
+.social > div > div > p {
+  font-size: 1em;
 }
 
 /* join our newsletter */
