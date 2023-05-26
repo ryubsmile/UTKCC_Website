@@ -185,6 +185,13 @@ nav a {
   border-right: none;
 }
 
+.links .nav-item.active {
+  border-style: solid;
+  border-color: var(--main-theme-color);
+  border-left: none;
+  border-right: none;
+}
+
 /* article section */
 
 main {
@@ -238,17 +245,17 @@ main {
   background-color: black;
 }
 
-.main .slide {
+main .slide {
   height: 100%;
   /* border: 3px solid red; */
 }
 
-.main .slide.active {
+main .slide.active {
   display: block;
 }
 
-.main .slide.inactive {
-  display: none;
+main .slide.inactive {
+  display: none !important;
 }
 
 /* the first page a visiter sees */
@@ -415,16 +422,16 @@ main {
   gap: 40px;
 }
 
-/* article - exec */
+/* article - slide */
 
-.executives .centered-title {
+.slide .subpage-title {
   text-align: center;
   font-weight: bold;
   font-size: 40px;
   color: inherit;
 }
 
-.exec-list {
+.slide .subpage-list {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -433,7 +440,7 @@ main {
   margin-top: 50px;
 }
 
-.exec-list .exec-dept {
+.slide .subpage-list .subpage-links {
   cursor: pointer;
   padding: 30px 10px;
   border: solid var(--main-theme-color) 1px;
@@ -461,7 +468,7 @@ main {
 
 /* article - events */
 
-.events .event-cells {
+.event-cells {
   width: 92vw;
   margin: 10px auto 0;
   display: grid;
@@ -504,6 +511,7 @@ section.newsletter {
   background-color: transparent;
   text-align: center;
   min-height: 300px;
+  margin-top: 100px;
 }
 
 .form-box {
@@ -514,7 +522,8 @@ section.newsletter {
 }
 
 .newsletter hr.bar {
-  width: 100%;
+  width: 60%;
+  margin-bottom: 50px;
   border: solid 1px var(--main-theme-color);
 }
 

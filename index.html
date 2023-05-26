@@ -29,56 +29,56 @@
           <div class="nav-item logo">
             <a
               href="https://www.utkcc.com/"
-              onclick="event.preventDefault(); navToPage('home');"
+              onclick="event.preventDefault(); displayDiv('homepage');"
               class="v-justify"
             >
               <img src="img/pic-logo.webp" class="v-justify pic-logo" />
             </a>
             <a
               href="https://www.utkcc.com/"
-              onclick="event.preventDefault(); navToPage('home');"
+              onclick="event.preventDefault(); displayDiv('homepage');"
               class="v-justify"
             >
               <img src="img/word-logo.webp" class="v-justify word-logo" />
             </a>
           </div>
           <div class="links">
-            <div class="nav-item exec">
+            <div class="executives nav-item inactive">
               <a
-                href="https://www.utkcc.com/executive"
-                onclick="event.preventDefault(); navToPage('executives')"
+                href="https://www.utkcc.com/executives"
+                onclick="event.preventDefault(); displayDiv('executives')"
               >
                 Executives
               </a>
             </div>
-            <div class="nav-item events">
+            <div class="events nav-item inactive">
               <a
                 href="https://www.utkcc.com/events"
-                onclick="event.preventDefault(); navToPage('events')"
+                onclick="event.preventDefault(); displayDiv('events')"
               >
                 Events
               </a>
             </div>
-            <div class="nav-item sponsors">
+            <div class="sponsors nav-item inactive">
               <a
                 href="https://www.utkcc.com/sponsors"
-                onclick="event.preventDefault(); navToPage('sponsors')"
+                onclick="event.preventDefault(); displayDiv('sponsors')"
               >
                 Sponsors
               </a>
             </div>
-            <div class="nav-item news">
+            <div class="newsletter nav-item inactive">
               <a
                 href="https://www.utkcc.com/newsletter"
-                onclick="event.preventDefault(); navToPage('newsletter')"
+                onclick="event.preventDefault(); displayDiv('newsletter')"
               >
                 Newsletter
               </a>
             </div>
-            <div class="nav-item res">
+            <div class="resources nav-item inactive">
               <a
                 href="https://www.utkcc.com/resources"
-                onclick="event.preventDefault(); navToPage('resources')"
+                onclick="event.preventDefault(); displayDiv('resources')"
               >
                 Resources
               </a>
@@ -86,7 +86,7 @@
           </div>
         </nav>
       </header>
-      <main>
+      <main id="main">
         <article class="homepage slide active">
           <img class="main-bg" src="img/main-bg.webp" alt="UTKCC." />
           <div class="entry-point">
@@ -155,7 +155,7 @@
                   </p>
                   <div
                     class="button-general white-button glass-button"
-                    onclick="navToPage('executives');"
+                    onclick="displayDiv('executives');"
                   >
                     MEET US
                   </div>
@@ -170,7 +170,7 @@
                   <p>저희가 준비한 각양각색의 이벤트들을 만나보세요!</p>
                   <div
                     class="button-general white-button glass-button"
-                    onclick="navToPage('events');"
+                    onclick="displayDiv('events');"
                   >
                     CHECK IT OUT
                   </div>
@@ -196,7 +196,7 @@
                   <div class="intro-title">SPONSORS</div>
                   <div
                     class="button-general color-button"
-                    onclick="navToPage('sponsors');"
+                    onclick="displayDiv('sponsors');"
                   >
                     SEE MORE
                   </div>
@@ -211,8 +211,47 @@
             </section>
           </div>
         </article>
-        <article class="executives slide inactive"></article>
-        <article class="events slide inactive"></article>
+        <article class="executives slide inactive">
+          <article class="executives slide inactive">
+            <div class="subpage-title">UTKCC 2022-23 EXECUTIVES</div>
+            <div class="subpage-list">
+              <div class="subpage-links">Presidents</div>
+              <div class="subpage-links">Finance</div>
+              <div class="subpage-links">External Relations</div>
+              <div class="subpage-links">Marketing</div>
+              <div class="subpage-links">Academics</div>
+              <div class="subpage-links">Social</div>
+              <div class="subpage-links">Media</div>
+              <div class="subpage-links">Programming</div>
+            </div>
+          </article>
+        </article>
+        <article class="events slide inactive">
+          <div class="subpage-title">UTKCC EVENTS</div>
+          <div class="subpage-list">
+            <div class="subpage-links" onclick="displayDiv('academic-events')">
+              Academic
+            </div>
+            <div
+              class="subpage-links"
+              onclick="displayDiv('professional-events')"
+            >
+              Professional
+            </div>
+            <div class="subpage-links" onclick="displayDiv('social-events')">
+              Social
+            </div>
+          </div>
+        </article>
+        <article class="academic-events slide inactive">
+          <div class="event-cells" id="academic"></div>
+        </article>
+        <article class="professional-events slide inactive">
+          <div class="event-cells" id="professional"></div>
+        </article>
+        <article class="social-events slide inactive">
+          <div class="event-cells" id="social"></div>
+        </article>
         <article class="sponsors slide inactive"></article>
         <article class="newsletter slide inactive"></article>
         <article class="resources slide inactive"></article>

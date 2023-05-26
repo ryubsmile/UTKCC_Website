@@ -145,6 +145,7 @@ function displayEvents(eventId) {
 }
 
 /**
+ * Helper function of `displayEvents`
  * Make an HTML element that contains info about a single event
  * ```{HTML}
  * <div> <!-- this is eventWrapperDiv -->
@@ -157,7 +158,7 @@ function displayEvents(eventId) {
  * ```
  *
  * Preconditions:
- *  @param {Object} eventDict is a valid event dictionary with three string key-value pairs: name, explanation, image. Refer to social-events.json for more details.
+ *  @param {JSON} eventDict is a valid event dictionary with three string key-value pairs: name, explanation, image. Refer to social-events.json for more details.
  */
 const makeEventDiv = eventDict => {
   if (!eventDict) throw MediaError;
@@ -191,3 +192,34 @@ function scrollToAboutUs() {
   aboutUs = document.getElementById('about-us-scroll-point');
   aboutUs.scrollIntoView({ behavior: 'smooth' });
 }
+
+/**
+ * Function for subpage navigations in events, sponsors, etc...
+ * each subpage has to be a direct child of a same div.
+ */
+function displayDiv(className) {
+  const selectedDivList = [...document.getElementsByClassName(className)];
+  if (!selectedDivList) return;
+
+  const activatedDivList = [...document.getElementsByClassName('active')];
+  activatedDivList.forEach(deactivateDiv);
+  selectedDivList.forEach(activateDiv);
+}
+
+const activateDiv = element => {
+  if (!element) return;
+  element.className = element.className
+    .split(' ')
+    .slice(0, -1)
+    .concat('active')
+    .join(' ');
+};
+
+const deactivateDiv = element => {
+  if (!element) return;
+  element.className = element.className
+    .split(' ')
+    .slice(0, -1)
+    .concat('inactive')
+    .join(' ');
+};
