@@ -30,7 +30,9 @@ window.onload = () => {
     ER_DIRECTOR_MAIL_23_24
   );
   repeatUpdateSponsor();
-  updateSocialEvents();
+  displayEvents('social');
+  displayEvents('professional');
+  displayEvents('academic');
 };
 
 /**
@@ -123,25 +125,27 @@ const updateAnimationName = (element, animationName) => {
 };
 
 /**
- * Using `makeSocialEventDiv(eventDict)`, construct event items based on social-events.json and update the DOM.
+ * Using `makeEventDiv(eventDict)`, construct event items based on social-events.json and update the DOM.
+ * @param {String} eventId is one of social, professional, academic
  */
-function updateSocialEvents() {
-  const targetElement = document.getElementById('social');
+function displayEvents(eventId) {
+  const targetElement = document.getElementById(eventId);
+  if (!targetElement) return;
 
-  // Gets data from social-events.json
-  fetch('./events/social-events.json')
+  // Gets data from {eventId}-events.json
+  fetch(`./events/${eventId}-events.json`)
     .then(response => {
       return response.json();
     })
     .then(data => {
       targetElement.append(
-        ...data.Events.slice(1).map(eventDict => makeSocialEventDiv(eventDict))
+        ...data.Events.slice(1).map(eventDict => makeEventDiv(eventDict))
       );
     });
 }
 
 /**
- * Make an HTML element that contains info about a single social event
+ * Make an HTML element that contains info about a single event
  * ```{HTML}
  * <div> <!-- this is eventWrapperDiv -->
  *   <img src={eventDict.image}/>
@@ -155,7 +159,7 @@ function updateSocialEvents() {
  * Preconditions:
  *  @param {Object} eventDict is a valid event dictionary with three string key-value pairs: name, explanation, image. Refer to social-events.json for more details.
  */
-const makeSocialEventDiv = eventDict => {
+const makeEventDiv = eventDict => {
   if (!eventDict) throw MediaError;
 
   // create img element

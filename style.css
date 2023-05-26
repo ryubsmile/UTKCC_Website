@@ -316,12 +316,12 @@ main {
 }
 
 .page-intro .about-us-text-box {
-  padding: 0 19% 100px;
+  padding: 100px 19% 100px;
   text-align: left;
 }
 
 .about-us-text-box .intro-title {
-  padding: 40px 0;
+  padding-bottom: 40px;
 }
 
 .page-intro.grid {
@@ -461,37 +461,39 @@ main {
 
 /* article - events */
 
-.events .social {
+.events .event-cells {
   width: 92vw;
   margin: 10px auto 0;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3, 1fr);
   gap: 4vw;
+  text-align: justify;
 }
 
-.social > div {
+.event-cells > div {
+  place-content: center center;
   width: 28vw;
-  height: 70vw;
+  min-height: 70vw;
   box-shadow: 0px 15px 30px #bebebe;
 }
 
-.social > div > img {
+.event-cells > div > img {
   width: 28vw;
   height: 28vw;
   object-fit: cover;
 }
 
-.social > div > div {
+.event-cells > div > div {
   margin: 20px;
   color: black;
 }
 
-.social > div > div > h2 {
+.event-cells > div > div > h2 {
   text-align: left;
   margin: 0 0 10px;
 }
 
-.social > div > div > p {
+.event-cells > div > div > p {
   font-size: 1em;
   color: #000000aa;
 }
