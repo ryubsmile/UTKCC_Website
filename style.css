@@ -198,6 +198,8 @@ main {
   height: 100%;
 }
 
+/* ---- */
+
 .gallery {
   margin: 2vw;
   border: 1px solid #ccc;
@@ -236,6 +238,8 @@ main {
   width: 100%;
 }
 
+/* ---- */
+
 .button {
   border: 2px solid white;
   border-radius: 12px;
@@ -247,6 +251,7 @@ main {
 
 main .slide {
   height: 100%;
+  text-align: center;
   /* border: 3px solid red; */
 }
 
@@ -424,14 +429,18 @@ main .slide.inactive {
 
 /* article - slide */
 
-.slide .subpage-title {
+.subpage-title {
   text-align: center;
   font-weight: bold;
   font-size: 40px;
   color: inherit;
 }
 
-.slide .subpage-list {
+.subpage-exp {
+  color: black;
+}
+
+.subpage-list {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -440,30 +449,12 @@ main .slide.inactive {
   margin-top: 50px;
 }
 
-.slide .subpage-list .subpage-links {
+.subpage-list .subpage-links {
   cursor: pointer;
   padding: 30px 10px;
   border: solid var(--main-theme-color) 1px;
   width: 300px;
   font-size: 20px;
-}
-
-/* ? */
-
-#title2 {
-  font-family: 'raleway';
-  font-size: 40px;
-  color: inherit;
-  margin: 40px;
-  text-align: center;
-  padding: 20px;
-}
-
-#p1 {
-  font-size: 20px;
-  color: black;
-  font-family: 'raleway-semibold', Calibri, 'Trebuchet MS', sans-serif;
-  margin-left: 17vw;
 }
 
 /* article - events */
@@ -505,13 +496,40 @@ main .slide.inactive {
   color: #000000aa;
 }
 
+/* article - sponsors */
+
+.sponsors h2 {
+  color: black;
+  font-weight: normal;
+}
+
+.sponsor-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 60vw;
+  margin: 0 auto;
+  gap: 50px;
+}
+
+.gallery {
+  margin: auto;
+}
+
+/* article - newsletter */
+
+.pdf-view {
+  width: 80vw;
+  height: 60vh;
+  margin: 50px auto;
+}
+
 /* join our newsletter */
 
 section.newsletter {
   background-color: transparent;
   text-align: center;
   min-height: 300px;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .form-box {
@@ -522,8 +540,8 @@ section.newsletter {
 }
 
 .newsletter hr.bar {
-  width: 60%;
-  margin-bottom: 50px;
+  width: 60vw;
+  margin-bottom: 20px;
   border: solid 1px var(--main-theme-color);
 }
 

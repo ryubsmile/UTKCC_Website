@@ -7,27 +7,27 @@
     },
     {
       "name": "Academic Events",
-      "image": "/img/events/utkcclogo.png",
+      "image": "/events/img/utkcclogo.png",
       "explanation": "KCC의 아카데믹 이벤트들을 한눈에 보실 수 있습니다."
     },
     {
       "name": "튜토리얼 세션",
-      "image": "/img/events/tutorial-session.png",
+      "image": "/events/img/tutorial-session.png",
       "explanation": "신입생 뿐만 아니라 재학생분들의 다가오는 미드텀, 파이널 준비를 도와드리기 위해 UTKCC가 튜토리얼 세션을 준비했습니다.<br><br>튜토리얼 세션은 수년간 축적된 자료들과 선배들이 준비한 Q&A 세션으로 구성되어 있으며, 맴버십에 한해서 제공됩니다.​<br><br>이미 과목을 성공적으로 이수한 선배들의 알찬 설명과 시험점수를 잘 받을 수 있는 팁도 많이 알려드릴 예정이니 꼭 참석하셔서 많은 도움 받아가시길 바랍니다!"
     },
     {
       "name": "타임테이블 세션",
-      "image": "/img/events/tt-session.png",
+      "image": "/events/img/tt-session.png",
       "explanation": "매년 극찬을 받았던 타임테이블 세션은 매해 7월 초쯤 진행됩니다!<br><br>줌을 통해 같은 과에 재학 중인 임원들과 이야기하며 조언과 팁들을 (e.g. 빌딩 간 시간이 얼마 정도 걸리는지 등) 얻어 가실 수 있는 시간입니다!<br><br>또한, 보다 효율적이고 원활한 진행을 위해서, 미리 희망하는 과목들을 담은 rough draft 타임테이블을 짜오시는 것을 추천드립니다.<br><br>아직 캠퍼스와 Acorn에 미숙하신 분들이 이번 세션을 통해 많은 정보와 도움을 받아 가셨으면 좋겠습니다!"
     },
     {
       "name": "General Meeting",
-      "image": "/img/events/gm.png",
+      "image": "/events/img/gm.png",
       "explanation": "유티라는 큰 도화지 속에 처음으로 그림을 그릴 준비를 하고 있을 신입생 여러분과, 그리던 그림의 끝 매듭을 지을 재학생 여러분을 위해 준비한 이벤트 GM이 기다립니다.<br><br>선배님들의 진심 어린 조언, 현실적인 팁, 그리고 마지막으로 그분들과 더 친해질 수 있는 네트워킹 자리가 기다리고 있으니 이런 좋은 기회를 놓치지 마세요!"
     },
     {
       "name": "족보 판매",
-      "image": "/img/events/past-papers.png",
+      "image": "/events/img/past-papers.png",
       "explanation": "To be written"
     }
   ]

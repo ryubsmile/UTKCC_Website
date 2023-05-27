@@ -3,24 +3,6 @@ const PRESIDENT_MAIL_23_24 = 'seohyun.kang@mail.utoronto.ca';
 const VICE_PRESIDENT_MAIL_23_24 = 'suye.han@mail.utoronto.ca';
 const ER_DIRECTOR_MAIL_23_24 = 'yujin.shim@mail.utoronto.ca';
 
-const home_sponsor_photo_left = [
-  '/img/home/sponsor/jjin1.jpg',
-  '/img/home/sponsor/kkar1.jpg',
-  '/img/home/sponsor/lash1.jpg',
-  '/img/home/sponsor/maple1.jpg',
-  '/img/home/sponsor/sinjeon1.jpg',
-  '/img/home/sponsor/wooriart1.jpg',
-];
-
-const home_sponsor_photo_right = [
-  '/img/home/sponsor/jjin2.jpg',
-  '/img/home/sponsor/kkar2.jpg',
-  '/img/home/sponsor/lash2.jpg',
-  '/img/home/sponsor/maple2.jpg',
-  '/img/home/sponsor/sinjeon2.jpg',
-  '/img/home/sponsor/wooriart2.jpg',
-];
-
 /* --- end of constants ---*/
 
 window.onload = () => {
@@ -29,19 +11,11 @@ window.onload = () => {
     VICE_PRESIDENT_MAIL_23_24,
     ER_DIRECTOR_MAIL_23_24
   );
-  repeatUpdateSponsor();
+  startUpdateSponsor();
   displayEvents('social');
   displayEvents('professional');
   displayEvents('academic');
 };
-
-/**
- * Not Yet Implemented.
- * @param {String} pageName the name of the page to be implemented.
- */
-function navToPage(pageName) {
-  console.log(`NAVIGATION TO ${pageName} TO BE IMPLEMENTED`);
-}
 
 /**
  * updates the footer mail address tag of given <id> have the link as its href attribute.
@@ -69,51 +43,66 @@ const updateAnchorRel = () => {
   }
 };
 
-let sponsor_photo_index = 0;
+function startUpdateSponsor() {
+  // Gets data from sponsor-info.json
+  fetch(`/sponsors/sponsor-info.json`)
+    .then(response => response.json())
+    .then(raw_data => raw_data['Sponsors'].slice(1))
+    .then(data => {
+      repeatUpdateSponsor(data);
+    });
+}
 
 /**
  * Repetitively updates sponsor images in the main page.
  * Update `home_sponsor_photo_left`and `home_sponsor_photo_right` for changing images.
  */
-function repeatUpdateSponsor() {
-  setInterval(() => {
-    console.log(sponsor_photo_index);
-    // update slide index
-    sponsor_photo_index++;
-    if (sponsor_photo_index > 5) sponsor_photo_index = 0;
+function repeatUpdateSponsor(data, sponsor_photo_index = 0) {
+  console.log(sponsor_photo_index);
+  // update slide index
+  if (++sponsor_photo_index > 5) {
+    sponsor_photo_index = 0;
+  }
 
-    // execute function
-    updateSponsorPhoto(sponsor_photo_index);
+  updateSponsorPhoto(data, sponsor_photo_index);
+  // execute function
+  setTimeout(() => {
+    repeatUpdateSponsor(data, sponsor_photo_index);
   }, 5000);
 }
 
-const updateSponsorPhoto = index => {
-  const imgList = document.querySelectorAll('img.sponsor-photos');
-  if (!imgList || !imgList[0]?.src) return;
+const updateSponsorPhoto = (data, index) => {
+  const leftFront = document.getElementById('left-front');
+  const leftRear = document.getElementById('left-rear');
+  const rightFront = document.getElementById('right-front');
+  const rightRear = document.getElementById('right-rear');
+
+  const imgList = [leftFront, leftRear, rightFront, rightRear];
+  if (!data || !imgList || ![...imgList].every(i => i.src)) return;
 
   // old image: hide
   // new image: change src, reveal
 
   if (!(index % 2)) {
     // even index: even is old,
-    updateAnimationName(imgList[0], 'img-hide');
-    updateAnimationName(imgList[2], 'img-hide');
+    updateAnimationName(leftFront, 'img-hide');
+    updateAnimationName(rightFront, 'img-hide');
 
-    imgList[1].src = home_sponsor_photo_left[index];
-    imgList[3].src = home_sponsor_photo_right[index];
+    leftRear.src = data[index].image1;
+    rightRear.src = data[index].image2;
 
-    updateAnimationName(imgList[1], 'img-reveal');
-    updateAnimationName(imgList[3], 'img-reveal');
+    updateAnimationName(leftRear, 'img-reveal');
+    updateAnimationName(rightRear, 'img-reveal');
   } else {
     // odd index: odd is old
-    updateAnimationName(imgList[1], 'img-hide');
-    updateAnimationName(imgList[3], 'img-hide');
+    updateAnimationName(leftRear, 'img-hide');
+    updateAnimationName(rightRear, 'img-hide');
 
-    imgList[0].src = home_sponsor_photo_left[index];
-    imgList[2].src = home_sponsor_photo_right[index];
+    leftFront.src = data[index].image1;
+    rightFront.src = data[index].image2;
 
-    updateAnimationName(imgList[0], 'img-reveal');
-    updateAnimationName(imgList[2], 'img-reveal');
+    updateAnimationName(leftFront, 'img-reveal');
+    updateAnimationName(rightFront, 'img-reveal');
   }
 };
 
@@ -133,14 +122,11 @@ function displayEvents(eventId) {
   if (!targetElement) return;
 
   // Gets data from {eventId}-events.json
-  fetch(`./events/${eventId}-events.json`)
-    .then(response => {
-      return response.json();
-    })
+  fetch(`/events/${eventId}-events.json`)
+    .then(response => response.json())
+    .then(raw_data => raw_data['Events'].slice(1))
     .then(data => {
-      targetElement.append(
-        ...data.Events.slice(1).map(eventDict => makeEventDiv(eventDict))
-      );
+      targetElement.append(...data.map(eventDict => makeEventDiv(eventDict)));
     });
 }
 
@@ -196,11 +182,27 @@ function scrollToAboutUs() {
 /**
  * Function for subpage navigations in events, sponsors, etc...
  * each subpage has to be a direct child of a same div.
+ * @param {String} className
  */
 function displayDiv(className) {
   const selectedDivList = [...document.getElementsByClassName(className)];
-  if (!selectedDivList) return;
 
+  // case of null : revert to homepage.
+  if (!selectedDivList || !className) {
+    displayDiv('homepage');
+    return;
+  }
+
+  // title modification
+  if (className === 'homepage') {
+    document.title = 'UTKCC - University of Toronto Korean Commerce Community';
+  } else {
+    document.title = `${
+      className.charAt(0).toUpperCase() + className.slice(1)
+    } | UTKCC`;
+  }
+
+  // class modification: deactivate except for the matching class
   const activatedDivList = [...document.getElementsByClassName('active')];
   activatedDivList.forEach(deactivateDiv);
   selectedDivList.forEach(activateDiv);
