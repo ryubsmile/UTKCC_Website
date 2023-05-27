@@ -1,0 +1,52 @@
+{
+  "Sponsors": [
+    {
+      "name": "이 곳에 스폰서 이름을 적어주세요! 형식: 한글 이름 / 영어이름",
+      "image1": "index.html로부터 이미지1의 상대경로를 적어주세요. 이미지는 정방형에 가까울수록 좋습니다.",
+      "image2": "index.html로부터 이미지2의 상대경로를 적어주세요.",
+      "mapLink": "구글 지도 상 스폰서의 위치 링크를 적어주세요."
+    },
+    {
+      "name": "찐토스트 / JJIN Toast",
+      "image1": "assets/sponsors/img/jjin1.jpg",
+      "image2": "assets/sponsors/img/jjin2.jpg",
+      "mapLink": "https://goo.gl/maps/Vi5AmYLZTgoPe9SY7"
+    },
+    {
+      "name": "K 노래방 / K Karaoke",
+      "image1": "assets/sponsors/img/kkar1.jpg",
+      "image2": "assets/sponsors/img/kkar2.jpg",
+      "mapLink": "https://goo.gl/maps/betFNwnCBDxxtV1GA"
+    },
+    {
+      "name": "한국식당 / The Korean Kitchen",
+      "image1": "assets/sponsors/img/jjin1.jpg",
+      "image2": "assets/sponsors/img/jjin2.jpg",
+      "mapLink": "https://goo.gl/maps/EGkkFDwPvZGdcoBc8"
+    },
+    {
+      "name": "신전떡볶이 / Sinjeon Topokki",
+      "image1": "assets/sponsors/img/sinjeon1.jpg",
+      "image2": "assets/sponsors/img/sinjeon2.jpg",
+      "mapLink": "https://goo.gl/maps/4MEbaftQ86rTjemn8"
+    },
+    {
+      "name": "메이플택배 / Maple Posts",
+      "image1": "assets/sponsors/img/maple1.jpg",
+      "image2": "assets/sponsors/img/maple2.jpg",
+      "mapLink": "https://goo.gl/maps/B8QproSxXTCGpsHz8"
+    },
+    {
+      "name": "Hello Lashes",
+      "image1": "assets/sponsors/img/lash1.jpg",
+      "image2": "assets/sponsors/img/lash2.jpg",
+      "mapLink": "https://goo.gl/maps/nKay1qVKd5VtXb1s6"
+    },
+    {
+      "name": "우리 아트 / Woori Art",
+      "image1": "assets/sponsors/img/wooriart1.jpg",
+      "image2": "assets/sponsors/img/wooriart2.jpg",
+      "mapLink": "https://goo.gl/maps/nKay1qVKd5VtXb1s6"
+    }
+  ]
+}

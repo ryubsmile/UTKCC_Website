@@ -45,7 +45,7 @@ const updateAnchorRel = () => {
 
 function startUpdateSponsor() {
   // Gets data from sponsor-info.json
-  fetch(`/sponsors/sponsor-info.json`)
+  fetch(`/assets/sponsors/sponsor-info.json`)
     .then(response => response.json())
     .then(raw_data => raw_data['Sponsors'].slice(1))
     .then(data => {
@@ -122,7 +122,7 @@ function displayEvents(eventId) {
   if (!targetElement) return;
 
   // Gets data from {eventId}-events.json
-  fetch(`/events/${eventId}-events.json`)
+  fetch(`/assets/events/${eventId}-events.json`)
     .then(response => response.json())
     .then(raw_data => raw_data['Events'].slice(1))
     .then(data => {
@@ -206,6 +206,10 @@ function displayDiv(className) {
   const activatedDivList = [...document.getElementsByClassName('active')];
   activatedDivList.forEach(deactivateDiv);
   selectedDivList.forEach(activateDiv);
+
+  // scroll to top
+  window.scrollTo(0, 0);
+  // document.scrollIntoView({ behavior: 'smooth' });
 }
 
 const activateDiv = element => {
