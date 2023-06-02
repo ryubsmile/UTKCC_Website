@@ -71,6 +71,11 @@ body {
   position: relative;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 p {
   font-family: 'Raleway', Calibri, 'Trebuchet MS', sans-serif;
   padding: 0;
@@ -503,16 +508,46 @@ main .slide.inactive {
   font-weight: normal;
 }
 
-.sponsor-container {
+.sponsor-cells {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 60vw;
-  margin: 0 auto;
+  margin: 50px auto;
   gap: 50px;
 }
 
-.gallery {
+.sponsor-cells > a > div {
+  place-content: center center;
+  width: 30vw;
+  height: 30vw;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: transparent;
+  background-color: transparent;
+  font-weight: bold;
+}
+
+.sponsor-cells > a > div:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.sponsor-cells > a > div > div {
   margin: auto;
+  color: inherit;
+  z-index: 99;
+}
+
+.sponsor-cells > a > div > div ~ div {
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  position: absolute;
+  z-index: 98;
 }
 
 /* article - newsletter */

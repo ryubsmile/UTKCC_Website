@@ -15,6 +15,7 @@ window.onload = () => {
   displayEvents('social');
   displayEvents('professional');
   displayEvents('academic');
+  displaySponsors();
 };
 
 /**
@@ -49,23 +50,20 @@ function startUpdateSponsor() {
     .then(response => response.json())
     .then(raw_data => raw_data['Sponsors'].slice(1))
     .then(data => {
-      repeatUpdateSponsor(data);
+      // repeatUpdateSponsor(data);
     });
 }
 
-/**
- * Repetitively updates sponsor images in the main page.
- * Update `home_sponsor_photo_left`and `home_sponsor_photo_right` for changing images.
- */
 function repeatUpdateSponsor(data, sponsor_photo_index = 0) {
-  console.log(sponsor_photo_index);
+  // execute function
+  updateSponsorPhoto(data, sponsor_photo_index);
+
   // update slide index
-  if (++sponsor_photo_index > 5) {
+  console.log(sponsor_photo_index);
+  if (++sponsor_photo_index >= data.length) {
     sponsor_photo_index = 0;
   }
 
-  updateSponsorPhoto(data, sponsor_photo_index);
-  // execute function
   setTimeout(() => {
     repeatUpdateSponsor(data, sponsor_photo_index);
   }, 5000);
@@ -170,6 +168,57 @@ const makeEventDiv = eventDict => {
   eventWrapperDiv.append(image, miniDiv);
 
   return eventWrapperDiv;
+};
+
+/**
+ * Using `makeSponsorDiv(sponsorDict)`, construct sponsor cell items based on sponsor-info.json and update the DOM.
+ */
+function displaySponsors() {
+  const targetElement = document.getElementById('sponsor-hub');
+  if (!targetElement) return;
+
+  // fetch data from sponsor-info.json
+  fetch(`/assets/sponsors/sponsor-info.json`)
+    .then(response => response.json())
+    .then(raw_data => raw_data['Sponsors'].slice(1))
+    .then(data => {
+      targetElement.append(
+        ...data.map(sponsorDict => makeSponsorDiv(sponsorDict))
+      );
+    });
+}
+
+/**
+ * Make an HTML element that contains info about a single kcc sponsor
+ * ```{HTML}
+ * <a href={sponsorDict.mapLink} rel="noopener noreferrer"> <!-- this is wrapperAnchorDiv -->
+ *   <div style="background-image: url({sponsorDict.image1})"> <!-- this is parentDiv -->
+ *     <div>{sponsorDict.name}</div> <!-- this is firstChildDiv -->
+ *     <div></div> <!-- this is secondChildDiv -->
+ *   </div>
+ * </a>
+ * ```
+ *
+ * Preconditions:
+ *  @param {JSON} sponsorDict is a valid event dictionary with three string key-value pairs: name, explanation, image. Refer to social-events.json for more details.
+ */
+const makeSponsorDiv = sponsorDict => {
+  if (!sponsorDict) throw MediaError;
+
+  const firstChildDiv = document.createElement('div');
+  firstChildDiv.textContent = sponsorDict.name;
+
+  const secondChildDiv = document.createElement('div');
+
+  const parentDiv = document.createElement('div');
+  parentDiv.style.backgroundImage = `url(${sponsorDict.image1})`;
+  parentDiv.append(firstChildDiv, secondChildDiv);
+
+  const wrapperAnchorDiv = document.createElement('a');
+  wrapperAnchorDiv.href = sponsorDict.mapLink;
+  wrapperAnchorDiv.append(parentDiv);
+
+  return wrapperAnchorDiv;
 };
 
 // the scroll function that is triggered
