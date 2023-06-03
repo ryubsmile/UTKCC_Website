@@ -203,57 +203,6 @@ main {
   height: 100%;
 }
 
-/* ---- */
-
-.gallery {
-  margin: 2vw;
-  border: 1px solid #ccc;
-  float: left;
-  width: 30vw;
-}
-
-.gallery:hover {
-  border: 1px solid;
-}
-
-.gallery img {
-  width: 100%;
-  height: 50vh;
-  object-fit: cover;
-}
-
-.desc {
-  padding: 15px;
-  text-align: center;
-}
-
-.center {
-  display: block;
-  float: left;
-  margin-left: 15vw;
-  width: 100%;
-  padding: 0px;
-}
-
-.sponsor_package {
-  float: left;
-  background-color: black;
-  padding: 80px;
-  color: white;
-  width: 100%;
-}
-
-/* ---- */
-
-.button {
-  border: 2px solid white;
-  border-radius: 12px;
-  padding: 10px;
-  color: white;
-  font-size: 16px;
-  background-color: black;
-}
-
 main .slide {
   height: 100%;
   text-align: center;
@@ -511,7 +460,7 @@ main .slide.inactive {
 .sponsor-cells {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 60vw;
+  width: max-content;
   margin: 50px auto;
   gap: 50px;
 }
@@ -526,7 +475,7 @@ main .slide.inactive {
   display: flex;
   align-items: center;
   position: relative;
-  color: transparent;
+  color: white;
   background-color: transparent;
   font-weight: bold;
 }
@@ -537,6 +486,8 @@ main .slide.inactive {
 }
 
 .sponsor-cells > a > div > div {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px;
   margin: auto;
   color: inherit;
   z-index: 99;
@@ -550,21 +501,55 @@ main .slide.inactive {
   z-index: 98;
 }
 
+.sponsor-package {
+  background-color: black;
+  color: white;
+  margin: 20px 0;
+  padding: 50px 0;
+}
+
+.sponsor-package > .sponsor-interest {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.sponsor-package hr {
+  width: 40%;
+  margin: 20px auto;
+}
+
+.sponsor-package .sponsor-button {
+  display: inline-block;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 10px;
+  color: white;
+  margin: 10px 10px;
+  padding: 10px 20px;
+  transition-duration: 0.3s;
+}
+
+.sponsor-package .sponsor-button:hover {
+  background-color: white;
+  color: black;
+}
+
 /* article - newsletter */
 
 .pdf-view {
-  width: 80vw;
-  height: 60vh;
+  width: 60vw;
+  height: 60vw;
   margin: 50px auto;
 }
 
 /* join our newsletter */
 
-section.newsletter {
+section.join-newsletter {
   background-color: transparent;
   text-align: center;
   min-height: 300px;
-  margin-top: 50px;
+  /* margin-top: 30px; */
 }
 
 .form-box {
@@ -574,7 +559,7 @@ section.newsletter {
   gap: 30px;
 }
 
-.newsletter hr.bar {
+section.join-newsletter hr.bar {
   width: 60vw;
   margin-bottom: 20px;
   border: solid 1px var(--main-theme-color);

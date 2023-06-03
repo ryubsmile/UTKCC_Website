@@ -50,7 +50,7 @@ function startUpdateSponsor() {
     .then(response => response.json())
     .then(raw_data => raw_data['Sponsors'].slice(1))
     .then(data => {
-      // repeatUpdateSponsor(data);
+      repeatUpdateSponsor(data);
     });
 }
 
@@ -206,7 +206,7 @@ const makeSponsorDiv = sponsorDict => {
   if (!sponsorDict) throw MediaError;
 
   const firstChildDiv = document.createElement('div');
-  firstChildDiv.textContent = sponsorDict.name;
+  firstChildDiv.innerHTML = sponsorDict.name;
 
   const secondChildDiv = document.createElement('div');
 
