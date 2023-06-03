@@ -93,7 +93,7 @@
         </nav>
       </header>
       <main id="main">
-        <article class="homepage slide active">
+        <article class="homepage slide inactive">
           <img
             class="main-bg"
             src="assets/navbar/img/main-bg.webp"
@@ -329,7 +329,433 @@
             />
           </div>
         </article>
-        <article class="resources slide inactive"></article>
+        <article class="resources slide active">
+          <div class="subpage-title">FREQUENTLY ASKED QUESTIONS</div>
+          <section class="faq-container">
+            <div class="faq-box" onclick="toggleClassState(this, 'faq-active')">
+              <!-- faq question -->
+              <h1 class="faq-question">KCC 어떻게 들어가나요?</h1>
+              <!-- faq answer -->
+              <div class="faq-body">
+                <p>
+                  9월에 신입생 인턴 모집 공고가 올라오면 부서별 서류 제출과
+                  면접을 진행합니다. 신입생이 아닌 경우에는 3월에 커미티 모집
+                  공고가 올라갑니다. 많은 지원 부탁드립니다.
+                </p>
+              </div>
+            </div>
+            <hr class="hr-line" />
+            <div class="faq-box" onclick="toggleClassState(this, 'faq-active')">
+              <!-- faq question -->
+              <h1 class="faq-question">대학 들어가기 전에 뭐해야 할까요?</h1>
+              <!-- faq answer -->
+              <div class="faq-body">
+                <p>
+                  대학 들어오기 전에 한국에서 준비할 수 있는 거를 미리 하고 오면
+                  좋은데요, 첫 번째로 캐나다에서는 아플 경우 병원 가기가 힘들기
+                  때문에 건강검진 한번 받는 거 추천드립니다. 그리고 필요한
+                  약들은 미리 한국에서 사 오는 게 좋습니다. 또한, 운전면허도
+                  시간이 될 때 미리 따는 거를 추천드려요. 마지막으로 비자 신청
+                  절대 잊지 말고 미리 해두시길 바랍니다. 학업 관련하여 입학 전
+                  준비할 수 있는 것은 생각보다 적은데요, 만약 문과이시라면
+                  방대한 양의 essay를 쓰게 되기 때문에 단어 공부하는 걸
+                  추천드려요. 이외에는 신입생으로서 할 수 있는 건 1학년 때 들을
+                  syllabus 미리 읽어보기 정도가 될 것 같습니다.
+                </p>
+              </div>
+            </div>
+            <hr class="hr-line" />
+            <div class="faq-box" onclick="toggleClassState(this, 'faq-active')">
+              <!-- faq question -->
+              <h1 class="faq-question">
+                수강신청은 어떻게 하는건가요? 필수과목을 못 듣는 경우도 있나요?
+              </h1>
+              <!-- faq answer -->
+              <div class="faq-body">
+                <p>
+                  수강신청일은 캠퍼스, 과, 그리고 학년마다 날짜가 다릅니다.
+                  본인이 속한 학과와 학년에 유의하여 수강 신청 당일에 시간에
+                  맞춰 Acorn 사이트에서 수강 신청을 하면 됩니다. 인기 있는 교양
+                  과목들은 아무래도 경쟁률이 높을 수도 있지만, 전공 필수과목들은
+                  못 들어가는 경우는 거의 없으니 걱정하지 않으셔도 됩니다. 수강
+                  신청할 때 코스 난이도, 시간대, 건물 간의 거리 등 신경 써야
+                  하는 요소들이 많기 때문에 선배들에게 자문하거나 KCC 아카데믹
+                  안티캘린더를 참고하시는 게 좋습니다. 또한, 7월에 주최하는
+                  Timetable Session에 참가하셔서 KCC 임원들에게 도움을 받는 것을
+                  추천드립니다.
+                </p>
+              </div>
+            </div>
+            <hr class="hr-line" />
+            <div class="faq-box" onclick="toggleClassState(this, 'faq-active')">
+              <!-- faq question -->
+              <h1 class="faq-question">더블 메이저 어떻게 하나요?</h1>
+              <!-- faq answer -->
+              <div class="faq-body">
+                <p>
+                  제일 많은 학부가 소속되어 있는 Faculty of Arts and Science의
+                  경우에는 1 specialist, 2 majors, 1 major & 2 minors 중에
+                  선택하셔야 합니다. UofT Academic Calendar 웹사이트에서
+                  필수과목들을 확인하여 수강하신 후, 2학기가 끝날 때쯤에
+                  Acorn에서 신청하시고 오퍼가 오면 수락하시면 됩니다.
+                </p>
+              </div>
+            </div>
+            <hr class="hr-line" />
+            <div class="faq-box" onclick="toggleClassState(this, 'faq-active')">
+              <!-- faq question -->
+              <h1 class="faq-question">
+                칼리지가 뭔가요? 기숙사에 살지 않더라도 칼리지가 중요한가요?
+              </h1>
+              <!-- faq answer -->
+              <div class="faq-body">
+                <p>
+                  토론토 대학교 내 칼리지 시스템은 Innis College, New College,
+                  St. Michael’s College, Trinity College, University College,
+                  Victoria College 과 Woodsworth College로 이루어져 있으며
+                  Faculty of Arts and Science 학생들을 더 효과적으로 관리하고
+                  서포트하고 있습니다. 모든 칼리지는 동일한 핵심 서비스를
+                  제공하고 있지만 각자 고유한 역사, 문화와 전통을 가지고
+                  있습니다. 기숙사 거주 예정이시라면 본인 학과와 전공수업
+                  위치들을 고려하여 칼리지를 선택하시는 것이 제일 좋을 것
+                  같습니다. 기숙사에 살지 않는 학생들에게도 학업적인 지원,
+                  오리엔테이션, 장학금 등 많은 서비스를 제공하기 때문에 조금 더
+                  다채로운 학교생활을 하고 싶으시면 칼리지 내의 이벤트나 활동에
+                  관심을 두고 참여해 보시는 것도 추천드립니다.
+                </p>
+              </div>
+            </div>
+            <hr class="hr-line" />
+            <div class="faq-box" onclick="toggleClassState(this, 'faq-active')">
+              <!-- faq question -->
+              <h1 class="faq-question">
+                자취할 때 통학이 오래 걸리면 힘든가요?
+              </h1>
+              <!-- faq answer -->
+              <div class="faq-body">
+                <p>
+                  학교 근처에서 자취하게 된다면 큰 비용이 들기 때문에 많이 멀지
+                  않다면 괜찮습니다. 그러나 통학이 오래 걸린다면 불편한 점들이
+                  있는데요, 예를 들어 토론토의 지하철인 TTC가 지연이 잦고 특히
+                  겨울에는 끊길 때도 많아 수업에 늦는 일이 종종 발생합니다.
+                  그래서 걸어서 통학할 수 있는 거리에 있는 위치에서 자취하는
+                  것을 추천드립니다.
+                </p>
+              </div>
+            </div>
+            <hr class="hr-line" />
+            <div class="faq-box" onclick="toggleClassState(this, 'faq-active')">
+              <!-- faq question -->
+              <h1 class="faq-question">
+                어떻게 하면 여름을 알차게 보낼 수 있을까요?
+              </h1>
+              <!-- faq answer -->
+              <div class="faq-body">
+                <p>
+                  학기가 시작되면 공부하는 시간 외에는 큰 여유 시간이 없기
+                  때문에 아쉬움 없이 마음껏 놀고 오는 것이 중요한 거 같습니다.
+                  하지만 좋은 기회가 있다면 여름 동안 인턴십 하는 것도 좋은
+                  선택입니다. 인턴십을 하지 않는다면 자기계발과 휴식에 집중하는
+                  것이 알차게 여름을 보내는 방법인 거 같습니다. 여행, 책 읽기,
+                  운동하기 등 학기 중에 하기 힘든 것들로 시간을 보내시고,
+                  친구들과 가족들이랑 시간 많이 보내면서 힐링하고 오시는 걸
+                  추천드려요.
+                </p>
+              </div>
+            </div>
+            <hr class="hr-line" />
+            <div class="faq-box" onclick="toggleClassState(this, 'faq-active')">
+              <!-- faq question -->
+              <h1 class="faq-question">학점은 어떻게 잘 받을 수 있나요?</h1>
+              <!-- faq answer -->
+              <div class="faq-body">
+                <p>
+                  사람마다 잘 맞는 공부 방식이 있겠지만, 기본적으로 강의와
+                  튜토리얼을 꼭 참석하고 틈틈이 교과서를 읽으며 개념 정리하고
+                  퀴즈나 연습 문제를 풀어보며 배운 것을 응용하는 것을 추천해
+                  드립니다. 질문이 있을 때는 교수님, 조교님 또는 같이 수업 듣는
+                  친구들에게 물어보고 Writing Center와 Learning Center을
+                  찾아가며 더욱더 효과적으로 공부할 수 있습니다. 그러나, 가장
+                  중요한 것은 멘탈 관리, 체력 관리, 그리고 시간 관리인 것
+                  같습니다. 남들에게 휘둘리지 않고 건강한 생활패턴을 유지하며
+                  해야 할 것을 하나하나 자신에게 맞는 속도와 방식으로 해나가는
+                  게 가장 중요합니다.
+                </p>
+              </div>
+            </div>
+            <hr class="hr-line" />
+            <div class="faq-box" onclick="toggleClassState(this, 'faq-active')">
+              <!-- faq question -->
+              <h1 class="faq-question">
+                대학교 다니면서 생기는 스트레스 해소법 + 멘탈관리 방법이 있나요?
+              </h1>
+              <!-- faq answer -->
+              <div class="faq-body">
+                <p>
+                  고등학교에서 받던 점수를 기대하며 대학교에서 첫 시험 점수를
+                  받고 실망하는 경우가 많습니다. 그러나, 대학교의 난이도가 매우
+                  어렵고 업무량도 훨씬 많은 뿐더러 동아리 활동, 대외활동, 자취
+                  또는 기숙사 생활, 등 공부하며 감당해야 할 것이 훨씬 많기
+                  때문에 충분히 그럴 수 있습니다. 언제나 최선을 다하고 후회하지
+                  않으시며 멘탈 관리를 하시고, 스트레스를 해소하기 위해 친구들과
+                  즐거운 시간을 보내거나 취미생활을 즐기는 것을 추천합니다.
+                </p>
+              </div>
+            </div>
+            <hr class="hr-line" />
+            <div class="faq-box" onclick="toggleClassState(this, 'faq-active')">
+              <!-- faq question -->
+              <h1 class="faq-question">추천하는 도서관은 어디인가요?</h1>
+              <!-- faq answer -->
+              <div class="faq-body">
+                <p>
+                  아무래도 유티 도서관 하면 가장 먼저 떠오르기도 하고, 북미에서
+                  3번째로 많은 책을 보유하는 로바츠 도서관을 추천해 드립니다.
+                  로바츠 도서관 건물 안에 스타벅스와 카페테리아가 있기 때문에
+                  많은 학생들이 즐겨 이용하시는 것 같습니다. 이 밖에도 내부가
+                  예쁜 Gerstein Science Information Centre과 24시간 운영하는
+                  Bahen Centre for Information Technology를 추천합니다.
+                </p>
+              </div>
+            </div>
+            <hr class="hr-line" />
+            <div class="faq-box" onclick="toggleClassState(this, 'faq-active')">
+              <!-- faq question -->
+              <h1 class="faq-question">토론토 맛집은 어디가 있나요?</h1>
+              <!-- faq answer -->
+              <div class="faq-body">
+                <p>
+                  미스코리아 (술집), 닭고기 (술집), 아지트 (술집), 포차 (술집),
+                  아지매국밥, 한양족발, 마포감자탕, 명동칼국수, 팔도강산,
+                  달동네, Bone Soup (마라탕), 파이 (태국음식), 사쿠스시 (롤
+                  맛집), 라지즈 (중동음식), 리오쇼우 핫팟 (훠궈), 처치스 치킨,
+                  페리카나 (치킨), cibo (양식), cactus club (양식), cafe landwer
+                  (브런치), raku (우동 맛집), kyoto katsugyu (규카츠), craig’s
+                  cookie (디저트), nanis (젤라또), Scooped by Demetres (젤라또),
+                  Cafe Bloom (마차 맛집)
+                </p>
+              </div>
+            </div>
+            <hr class="hr-line" />
+            <div class="faq-box" onclick="toggleClassState(this, 'faq-active')">
+              <!-- faq question -->
+              <h1 class="faq-question">
+                대학교에서 운동은 어디서 할 수 있을까요?
+              </h1>
+              <!-- faq answer -->
+              <div class="faq-body">
+                <p>
+                  Hart House, Goldring Centre, Athletic Centre 라는 캔퍼스
+                  건물에서 가능합니다. 대표적으로는 Goldring Centre 나 Athletic
+                  Centre 가 있는데요, Goldring Centre에서는 운동기구들이나 dance
+                  studio가 제공 되어있는 반면, Athletic Centre에서는 운동기구도
+                  제공하는 동시에 수영장, track and field 등 유티를 대표하는
+                  Varsity team들이 연습 할 수 있는 공간을 제공하고 있는
+                  장소이기도 합니다.
+                </p>
+              </div>
+            </div>
+            <hr class="hr-line" />
+            <div class="faq-box" onclick="toggleClassState(this, 'faq-active')">
+              <!-- faq question -->
+              <h1 class="faq-question">
+                학생증을 잃어버렸을 때 어떻게 재발급 받을 수 있나요?
+              </h1>
+              <!-- faq answer -->
+              <div class="faq-body">
+                <p>
+                  TCard로 불리는 학생증의 경우, 분실과 도난 사고 발생 시 본인이
+                  직접 $20을 지불하고 재발급 받아야 합니다. 본인 과실 외의
+                  이유로 학생증에 문제가 있을 시에는 무료로 재발급이 가능합니다.
+                  재발급을 위해서는 CLNX 사이트에 접속하여 본인 캠퍼스에 맞게
+                  In-person appointment를 예약합니다. 2년 안에 촬영한 사진과
+                  (지났을 시 재촬영) 여권을 지참하시면 재발급이 가능합니다.
+                </p>
+              </div>
+            </div>
+            <hr class="hr-line" />
+            <div class="faq-box" onclick="toggleClassState(this, 'faq-active')">
+              <!-- faq question -->
+              <h1 class="faq-question">CR/NCR은 무엇이고 어떻게 사용하나요?</h1>
+              <!-- faq answer -->
+              <div class="faq-body">
+                <p>
+                  풀어서 말해 Credit/No Credit option이라고 합니다. 쉽게 설명해
+                  특정 과목의 점수가 GPA에 영향이 가지 않게 하는 제도입니다.
+                  전공 과목, 프로그램 requirement를 채우는데에는 사용할 수
+                  없지만, 교양과목에는 사용이 가능합니다. 쉽게 말해 파이널
+                  점수가 50%가 넘는다면 Credit으로 인정이 되고, 50%가 넘지
+                  못한다면 Credit으로 인정이 불가능합니다. 보통 교양과목에서
+                  50%는 넘을 것 같지만 좋은 학점을 못받을 것 같을 때 사용하시면
+                  GPA에도 무리가 안가고 Breadth Requirement에는 적용이 되니 학점
+                  걱정 없이 유용하게 사용하실 수 있을 것 같습니다. 하지만 CR/NCR
+                  option은 2.0 크레딧까지만 사용할 수 있으니 이 점 유의하시면서
+                  쓰시는게 좋습니다.
+                </p>
+              </div>
+            </div>
+            <hr class="hr-line" />
+            <div class="faq-box" onclick="toggleClassState(this, 'faq-active')">
+              <!-- faq question -->
+              <h1 class="faq-question">
+                Late Withdrawal은 무엇이고 어떻게 사용하나요?
+              </h1>
+              <!-- faq answer -->
+              <div class="faq-body">
+                <p>
+                  Late Withdrawal은 과목 수강이 끝나는 전날까지 특정 과목을
+                  drop할 수 있는 제도입니다. 하지만 본인이 하고있는 degree의
+                  최대 3.0 credit까지만 적용할 수 있으며 college register을
+                  통해서 LWD를 요청 할 수 있습니다. 그 과목은 GPA나 academic
+                  record의 다른 요소들에 영향을 주지 않습니다. 과제량에서 많이
+                  뒤쳐지거나 시험에 전혀 준비되지 않았을 때 그 과목을 끝까지 잘
+                  해내지 못할 것 같을 때 주로 이 제도를 쓰는데 유념해야할 점은
+                  일반적으로 정해진 기간 내에 과목을 drop하는 것과 달리 Late
+                  Withdrawal은 ACORN에 해당 과목이 LWD라고 명시되어질 것입니다.
+                </p>
+              </div>
+            </div>
+            <hr class="hr-line" />
+            <div class="faq-box" onclick="toggleClassState(this, 'faq-active')">
+              <!-- faq question -->
+              <h1 class="faq-question">Breadth Requirement는 무엇인가요?</h1>
+              <!-- faq answer -->
+              <div class="faq-body">
+                <p>
+                  Breadth requirement는 졸업하기 위해 필수적으로 이수해야 하는
+                  학점입니다. 총 5가지의 과목 카테고리가 있습니다. 두 가지 조합
+                  중에서 선택해서 이수하면 됩니다. 첫 번째는 4개의 카테고리에서
+                  1.0학점을 이수하는 것이고 두 번째는 3개의 카테고리에서 1.0씩
+                  이수하는 동시에 나머지 3개의 카테고리에서 0.5학점을 이수하는
+                  방식이 있습니다. <br /><br />
+                  카테고리는
+                  <br />
+                  1. Creative and Cultural Representations
+                  <br />
+                  2. Thought, Belief, and Behaviour
+                  <br />
+                  3. Society and Its Institutions
+                  <br />
+                  4. Living Things and Their Environment
+                  <br />
+                  5. The Physical and Mathematical Universes
+                  <br /><br />
+                  예를 들면 첫 번째 조합으로는 1,2,3,4 카테고리에서 각각
+                  1.0학점씩 이수하는 것이고 두 번째 조합으로는 1,2,3
+                  카테고리에서 1.0씩 그리고 4,5에서 0.5씩 이수할 수 있습니다.
+                </p>
+              </div>
+            </div>
+            <hr class="hr-line" />
+            <div class="faq-box" onclick="toggleClassState(this, 'faq-active')">
+              <!-- faq question -->
+              <h1 class="faq-question">
+                토론토 공항에서 기숙사까지 이동은 어떻게 하나요?
+              </h1>
+              <!-- faq answer -->
+              <div class="faq-body">
+                <p>
+                  토론토 공항에서 최종 목적지인 기숙사 혹은 숙소로 가는 방법은
+                  여러 가지가 있습니다. 공항철도인 “UP EXPRESS”를 탄 후에 네
+                  곳의 역 (Pearson -> weston -> Bloor -> Unio) 중 본인의
+                  목적지와 가까운 역에 내려가는 방법이 있습니다. 하지만, 짐이
+                  많아 대중교통을 타는 게 불편한 분들은 우버나 한인 택시를
+                  이용할 수도 있습니다. 우버는 공항 밖 우버 표지판 앞에서 부르실
+                  수 있습니다. 우버를 잡고 기사님을 만나는 시간까지 시간이
+                  소요되는 단점이 있습니다. 즉흥적으로 우버를 잡기 힘드신 분
+                  또는 한인 업체가 더 편하신 분들은 출국 전 미리 한인 공항 픽업
+                  서비스를 신청하셔서 미리 약속한 장소와 시간에서 가이드분을
+                  만나시길 추천드립니다.
+                </p>
+              </div>
+            </div>
+            <hr class="hr-line" />
+            <div class="faq-box" onclick="toggleClassState(this, 'faq-active')">
+              <!-- faq question -->
+              <h1 class="faq-question">
+                토론토에서 지하철과 버스같이 대중교통은 어떻게 이용하나요?
+              </h1>
+              <!-- faq answer -->
+              <div class="faq-body">
+                <p>
+                  토론토 대중교통 TTC는 지하철, 노면전차 (streetcar), 버스 모두
+                  운영하는 대중교통 업체입니다. 지하철은 두 개의 호선으로
+                  이루어져 있고, 그 외의 목적지들은 streetcar와 버스로 이동
+                  가능합니다. TTC를 이용할 때에는 프레스토 카드를 사용하는데,
+                  한국에서 티머니와 같은 교통카드입니다. 구매는 Shopper’s Drug
+                  Mart 계산대에서 하실 수 있고, 가끔 전철역에서 판매하기도
+                  합니다. 충전은 전철역, TTC 전용 애플리케이션, 또는 Shopper’s
+                  Drug Mart에서 현금이나 카드로 가능합니다. 사용내역과 잔액도
+                  애플리케이션에서 확인 가능하니 다운로드하시는 것을
+                  추천드립니다. 성인 기준 $3.2이라 싸지 않은 금액이지만, 찍힌 후
+                  2시간 동안 무제한으로 이용 가능합니다. 학생 요금을 적용하고
+                  싶으시다면 프레스토 카드를 구매할 때 티카드와 함께 부탁하시면
+                  됩니다. 다만 먼슬리로 결제되는 방식이기 때문에 TTC를 자주
+                  사용하시는 분들 한정으로 추천드립니다.
+                </p>
+              </div>
+            </div>
+            <hr class="hr-line" />
+            <div class="faq-box" onclick="toggleClassState(this, 'faq-active')">
+              <!-- faq question -->
+              <h1 class="faq-question">
+                대학교에서 제공되는 보험은 어떻게 활성화할 수 있나요?
+              </h1>
+              <!-- faq answer -->
+              <div class="faq-body">
+                <p>
+                  작년 기준 토론토 대학교에서 제공하는 보험회사는 Sun
+                  Life입니다. 가입 및 활성화 방법은 간단합니다. mysunlife.ca에
+                  방문하여 계정을 만듭니다. 이때 필요한 게 contact number랑
+                  member id인데 contract number는 050150이고 member ID는 U
+                  더하기 student number 10자리입니다 (예시: U1000123321) 또는
+                  student number가 9자리 이면 UT 더하기 student number
+                  9자리입니다. (예시: UT997123321). 이메일 인증 후에 Sun Life
+                  회사에 가입 때 사용되었던 휴대전화로 1-866-500-8447에 전화를
+                  걸어서 activation 신청을 하면 활성화 및 발급이 완료됩니다.
+                  자세한 사항은link를 통해 확인해주세요!
+                </p>
+              </div>
+            </div>
+            <hr class="hr-line" />
+            <div class="faq-box" onclick="toggleClassState(this, 'faq-active')">
+              <!-- faq question -->
+              <h1 class="faq-question">
+                토론토에서 코로나 검사는 어디서 받을 수 있나요?
+              </h1>
+              <!-- faq answer -->
+              <div class="faq-body">
+                <p>
+                  https://covid-19.ontario.ca/assessment-centre-locations/
+                  <br /><br />
+                  위 사이트에서 자신과 가장 가까운 코로나 검사소를 찾을 수
+                  있습니다. 원하시는 검사소를 클릭하시면, 자세한 주소, 번호,
+                  예약 방법 등 코로나 검사 예약 시 필요한 정보들을 보실 수
+                  있습니다. 여행을 위한 코로나 검사를 받을 시에는 꼭 병원에
+                  가능한지 문의해야 합니다. 어떤 곳들은 코로나 증상 (기침,
+                  발열등) 이 있는 사람들만 검사가 가능하기 때문에 꼭 여행용
+                  코로나 검사가 가능한지 문의해야 합니다. 대부분 검사소의 여행용
+                  코로사 검사 비용은 80불에서 200불 사이입니다.
+                </p>
+              </div>
+            </div>
+            <hr class="hr-line" />
+            <div class="faq-box" onclick="toggleClassState(this, 'faq-active')">
+              <!-- faq question -->
+              <h1 class="faq-question">Reading week이 무엇인가요?</h1>
+              <!-- faq answer -->
+              <div class="faq-body">
+                <p>
+                  Reading week이란 매 학기 중간, 1주일 정도의 기간으로 제공되는
+                  짧은 방학을 의미합니다. 이 기간에는 밀릴 수도 있는 방대한
+                  공부량과 진도를 따라잡을 수 있도록 수업이 진행되지 않으며,
+                  과제를 끝내거나 리딩을 하거나 시험공부를 위한 예습 복습을 하는
+                  등, 기분 전환과 재정비의 시간으로 활용할 수 있습니다.
+                </p>
+              </div>
+            </div>
+          </section>
+        </article>
       </main>
 
       <!-- join our monthly newsletter part -->

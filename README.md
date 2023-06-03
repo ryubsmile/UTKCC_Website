@@ -51,6 +51,8 @@ Navigate to `./events/social-events.json`. This is a JSON file which stores info
 
 - using fetch + onclick, make initial loading lazier (fetch files only when clicked.)
 
+- automate executives page after backend implementation using LinkedIn API
+
 ## Authors
 
 16th (2022-23):

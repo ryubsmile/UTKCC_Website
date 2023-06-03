@@ -388,6 +388,7 @@ main .slide.inactive {
   font-weight: bold;
   font-size: 40px;
   color: inherit;
+  margin-bottom: 20px;
 }
 
 .subpage-exp {
@@ -541,6 +542,72 @@ main .slide.inactive {
   width: 60vw;
   height: 60vw;
   margin: 50px auto;
+}
+
+/* article - resources */
+
+/* FAQ section */
+
+.faq-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hr-line {
+  width: 60%;
+  margin: auto;
+  color: black;
+}
+
+.faq-box {
+  width: 60%;
+  margin: auto;
+}
+
+.faq-question {
+  font-size: 20px;
+  color: #1d1d1d;
+  cursor: pointer;
+  padding: 30px 0;
+  border: none;
+  outline: none;
+  margin: auto;
+  transition-duration: 0.4s;
+}
+
+.faq-body {
+  margin: auto;
+  /* text-align: center; */
+  padding: auto;
+  margin: 0 30px 30px;
+  display: none;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.faq-active,
+.faq-question:hover {
+  background-color: #f9f9f9;
+}
+
+/* Style the faq-page panel. Note: hidden by default */
+.faq-active .faq-body {
+  background-color: white;
+  display: block;
+}
+
+.faq-question:after {
+  content: '\02714';
+  /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #1d1d1d;
+  float: right;
+  margin-right: 30px;
+}
+
+.faq-active .faq-question:after {
+  content: '\2716';
+  /* Unicode character for "minus" sign (-) */
 }
 
 /* join our newsletter */

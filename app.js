@@ -16,6 +16,8 @@ window.onload = () => {
   displayEvents('professional');
   displayEvents('academic');
   displaySponsors();
+
+  updateAnchorRel();
 };
 
 /**
@@ -48,7 +50,7 @@ function startUpdateSponsor() {
   // Gets data from sponsor-info.json
   fetch(`/assets/sponsors/sponsor-info.json`)
     .then(response => response.json())
-    .then(raw_data => raw_data['Sponsors'].slice(1))
+    .then(raw_data => raw_data.slice(1))
     .then(data => {
       repeatUpdateSponsor(data);
     });
@@ -122,7 +124,7 @@ function displayEvents(eventId) {
   // Gets data from {eventId}-events.json
   fetch(`/assets/events/${eventId}-events.json`)
     .then(response => response.json())
-    .then(raw_data => raw_data['Events'].slice(1))
+    .then(raw_data => raw_data.slice(1))
     .then(data => {
       targetElement.append(...data.map(eventDict => makeEventDiv(eventDict)));
     });
@@ -180,7 +182,7 @@ function displaySponsors() {
   // fetch data from sponsor-info.json
   fetch(`/assets/sponsors/sponsor-info.json`)
     .then(response => response.json())
-    .then(raw_data => raw_data['Sponsors'].slice(1))
+    .then(raw_data => raw_data.slice(1))
     .then(data => {
       targetElement.append(
         ...data.map(sponsorDict => makeSponsorDiv(sponsorDict))
@@ -258,7 +260,6 @@ function displayDiv(className) {
 
   // scroll to top
   window.scrollTo(0, 0);
-  // document.scrollIntoView({ behavior: 'smooth' });
 }
 
 const activateDiv = element => {
@@ -278,3 +279,22 @@ const deactivateDiv = element => {
     .concat('inactive')
     .join(' ');
 };
+
+/**
+ * Given an element, toggle given class.
+ * If the element has the class, remove it.
+ * If the element does not have the class, add it.
+ * @param {HTMLDivElement} element - the element to modify class
+ * @param {String} className - the class name to add / remove
+ */
+function toggleClassState(element, className) {
+  const currentClassList = element.className.split(' ');
+
+  // add / remove classes
+  const updatedClassList = currentClassList.filter(c => c !== className);
+  if (updatedClassList.length === currentClassList.length) {
+    updatedClassList.push(className);
+  }
+
+  element.className = updatedClassList.join(' ');
+}
