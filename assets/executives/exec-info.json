@@ -29,21 +29,21 @@
   },
   {
     "Dept": "Social",
-    "Position": "\bCommittee",
+    "Position": "Committee",
     "Name": "이기서",
     "LinkedIn": "",
     "Major": "Financial Economics specialist"
   },
   {
     "Dept": "Social",
-    "Position": "\bCommittee",
+    "Position": "Committee",
     "Name": "신예서",
     "LinkedIn": "",
     "Major": "Economics"
   },
   {
     "Dept": "Social",
-    "Position": "\bCommittee",
+    "Position": "Committee",
     "Name": "김준수",
     "LinkedIn": "",
     "Major": "Statistics"
@@ -57,14 +57,14 @@
   },
   {
     "Dept": "Academic",
-    "Position": "\bCommittee",
+    "Position": "Committee",
     "Name": "전재민",
     "LinkedIn": "https://www.linkedin.com/in/justinjaeminjun/",
     "Major": "Rotman Commerce"
   },
   {
     "Dept": "Academic",
-    "Position": "\bCommittee",
+    "Position": "Committee",
     "Name": "이은서",
     "LinkedIn": "https://www.linkedin.com/in/eunseo-lee-715435216",
     "Major": "Economics and Statistics"
@@ -78,14 +78,14 @@
   },
   {
     "Dept": "External Relations",
-    "Position": "\bCommittee",
+    "Position": "Committee",
     "Name": "배정훈",
     "LinkedIn": "",
     "Major": "Economics & Health studies major and Statistics minor"
   },
   {
     "Dept": "External Relations",
-    "Position": "\bCommittee",
+    "Position": "Committee",
     "Name": "진예령",
     "LinkedIn": "",
     "Major": "Kinesiology and Physical Education"
@@ -99,28 +99,28 @@
   },
   {
     "Dept": "Marketing",
-    "Position": "\bCommittee",
+    "Position": "Committee",
     "Name": "오하린",
     "LinkedIn": "",
     "Major": "Rotman Commerce"
   },
   {
     "Dept": "Marketing",
-    "Position": "\bCommittee",
+    "Position": "Committee",
     "Name": "조은비",
     "LinkedIn": "https://www.linkedin.com/in/eunbi-cho-70b854257/",
     "Major": "Economics and Statistics"
   },
   {
     "Dept": "Marketing",
-    "Position": "\bCommittee",
+    "Position": "Committee",
     "Name": "임윤아",
     "LinkedIn": "",
     "Major": "Rotman Commerce"
   },
   {
     "Dept": "Marketing",
-    "Position": "\bCommittee",
+    "Position": "Committee",
     "Name": "유현준",
     "LinkedIn": "www.linkedin.com/in/hyunjunyou",
     "Major": "Rotman Commerce"
@@ -134,14 +134,14 @@
   },
   {
     "Dept": "Finance",
-    "Position": "\bCommittee",
+    "Position": "Committee",
     "Name": "강민서",
     "LinkedIn": "https://www.linkedin.com/in/lauren-kang-92149a24b/",
     "Major": "Economics and IRHR"
   },
   {
     "Dept": "Finance",
-    "Position": "\bCommittee",
+    "Position": "Committee",
     "Name": "홍윤재",
     "LinkedIn": "https://www.linkedin.com/in/yoon-jae-hong-418858139/",
     "Major": "Rotman Commerce"
@@ -155,14 +155,14 @@
   },
   {
     "Dept": "Media",
-    "Position": "\bCommittee",
+    "Position": "Committee",
     "Name": "이지현",
     "LinkedIn": "https://www.linkedin.com/in/lucy-lee-056402256",
     "Major": "Computer Science and Statistics"
   },
   {
     "Dept": "Media",
-    "Position": "\bCommittee",
+    "Position": "Committee",
     "Name": "조예은",
     "LinkedIn": "",
     "Major": "Math and Statistics"
@@ -176,7 +176,7 @@
   },
   {
     "Dept": "Programming",
-    "Position": "\bCommittee",
+    "Position": "Committee",
     "Name": "류재혁",
     "LinkedIn": "",
     "Major": "Statistics and Computer Science"
