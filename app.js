@@ -6,19 +6,39 @@ const ER_DIRECTOR_MAIL_23_24 = 'yujin.shim@mail.utoronto.ca';
 /* --- end of constants ---*/
 
 window.onload = () => {
+  // HOME
   updateFooterMailAddress(
     PRESIDENT_MAIL_23_24,
     VICE_PRESIDENT_MAIL_23_24,
     ER_DIRECTOR_MAIL_23_24
   );
   startUpdateSponsor();
+
+  // EXECUTIVES
+  displayExecutives();
+
+  // EVENTS
   displayEvents('social');
   displayEvents('professional');
   displayEvents('academic');
+
+  // SPONSORS
   displaySponsors();
 
+  // GENERAL
   updateAnchorRel();
 };
+
+// HOME & GENERAL
+
+/**
+ * the scroll function that is triggered
+ * when about-us button is pressed.
+ */
+function scrollToAboutUs() {
+  aboutUs = document.getElementById('about-us-scroll-point');
+  aboutUs.scrollIntoView({ behavior: 'smooth' });
+}
 
 /**
  * updates the footer mail address tag of given <id> have the link as its href attribute.
@@ -114,123 +134,6 @@ const updateAnimationName = (element, animationName) => {
 };
 
 /**
- * Using `makeEventDiv(eventDict)`, construct event items based on social-events.json and update the DOM.
- * @param {String} eventId is one of social, professional, academic
- */
-function displayEvents(eventId) {
-  const targetElement = document.getElementById(eventId);
-  if (!targetElement) return;
-
-  // Gets data from {eventId}-events.json
-  fetch(`/assets/events/${eventId}-events.json`)
-    .then(response => response.json())
-    .then(raw_data => raw_data.slice(1))
-    .then(data => {
-      targetElement.append(...data.map(eventDict => makeEventDiv(eventDict)));
-    });
-}
-
-/**
- * Helper function of `displayEvents`
- * Make an HTML element that contains info about a single event
- * ```{HTML}
- * <div> <!-- this is eventWrapperDiv -->
- *   <img src={eventDict.image}/>
- *   <div> <!-- this is miniDiv -->
- *     <h2>{eventDict.name}</h2> <!-- this is name -->
- *     <p>{eventDict.explanation}</p> <!-- this is exp -->
- *   </div>
- * </div>
- * ```
- *
- * Preconditions:
- *  @param {JSON} eventDict is a valid event dictionary with three string key-value pairs: name, explanation, image. Refer to social-events.json for more details.
- */
-const makeEventDiv = eventDict => {
-  if (!eventDict) throw MediaError;
-
-  // create img element
-  const image = document.createElement('img');
-  image.src = eventDict.image;
-
-  // create h2 element
-  const name = document.createElement('h2');
-  name.append(eventDict.name);
-
-  // create p element
-  const exp = document.createElement('p');
-  exp.innerHTML = eventDict.explanation;
-
-  // create h2 + p wrapper div element, append.
-  const miniDiv = document.createElement('div');
-  miniDiv.append(name, exp);
-
-  // create parent div element
-  const eventWrapperDiv = document.createElement('div');
-  eventWrapperDiv.append(image, miniDiv);
-
-  return eventWrapperDiv;
-};
-
-/**
- * Using `makeSponsorDiv(sponsorDict)`, construct sponsor cell items based on sponsor-info.json and update the DOM.
- */
-function displaySponsors() {
-  const targetElement = document.getElementById('sponsor-hub');
-  if (!targetElement) return;
-
-  // fetch data from sponsor-info.json
-  fetch(`/assets/sponsors/sponsor-info.json`)
-    .then(response => response.json())
-    .then(raw_data => raw_data.slice(1))
-    .then(data => {
-      targetElement.append(
-        ...data.map(sponsorDict => makeSponsorDiv(sponsorDict))
-      );
-    });
-}
-
-/**
- * Make an HTML element that contains info about a single kcc sponsor
- * ```{HTML}
- * <a href={sponsorDict.mapLink} rel="noopener noreferrer"> <!-- this is wrapperAnchorDiv -->
- *   <div style="background-image: url({sponsorDict.image1})"> <!-- this is parentDiv -->
- *     <div>{sponsorDict.name}</div> <!-- this is firstChildDiv -->
- *     <div></div> <!-- this is secondChildDiv -->
- *   </div>
- * </a>
- * ```
- *
- * Preconditions:
- *  @param {JSON} sponsorDict is a valid event dictionary with three string key-value pairs: name, explanation, image. Refer to social-events.json for more details.
- */
-const makeSponsorDiv = sponsorDict => {
-  if (!sponsorDict) throw MediaError;
-
-  const firstChildDiv = document.createElement('div');
-  firstChildDiv.innerHTML = sponsorDict.name;
-
-  const secondChildDiv = document.createElement('div');
-
-  const parentDiv = document.createElement('div');
-  parentDiv.style.backgroundImage = `url(${sponsorDict.image1})`;
-  parentDiv.append(firstChildDiv, secondChildDiv);
-
-  const wrapperAnchorDiv = document.createElement('a');
-  wrapperAnchorDiv.href = sponsorDict.mapLink;
-  wrapperAnchorDiv.append(parentDiv);
-
-  return wrapperAnchorDiv;
-};
-
-// the scroll function that is triggered
-// when about-us button is pressed.
-function scrollToAboutUs() {
-  aboutUs = document.getElementById('about-us-scroll-point');
-  aboutUs.scrollIntoView({ behavior: 'smooth' });
-}
-
-/**
  * Function for subpage navigations in events, sponsors, etc...
  * each subpage has to be a direct child of a same div.
  * @param {String} className
@@ -298,3 +201,151 @@ function toggleClassState(element, className) {
 
   element.className = updatedClassList.join(' ');
 }
+
+// EXECUTIVES
+
+function displayExecutives() {
+  fetch(`/assets/executives/exec-info.json`)
+    .then(response => response.json())
+    .then(raw_data => raw_data.slice(1)) // to ignore the first example obj
+    .then(data => {
+      const execByDept = {};
+
+      for (const singleExec of data) {
+        if (!execByDept.hasOwnProperty(singleExec.Dept)) {
+          execByDept[singleExec.Dept] = {
+            entireDept: [],
+          };
+        }
+
+        const singleDept = execByDept[singleExec.Dept];
+        if (!singleDept.hasOwnProperty(singleExec.Position)) {
+          singleDept[singleExec.Position] = [];
+        }
+
+        singleDept.entireDept.push(singleExec);
+        singleDept[singleExec.Position].push(singleExec);
+      }
+
+      return execByDept;
+    });
+}
+
+function displayDept(deptName) {
+  // if it's not president,
+  const targetElement = document.getElementById(deptName);
+}
+
+// EVENTS
+
+/**
+ * Using `makeEventDiv(eventDict)`, construct event items based on social-events.json and update the DOM.
+ * @param {String} eventId is one of social, professional, academic
+ */
+function displayEvents(eventId) {
+  const targetElement = document.getElementById(eventId);
+  if (!targetElement) return;
+
+  // Gets data from {eventId}-events.json
+  fetch(`/assets/events/${eventId}-events.json`)
+    .then(response => response.json())
+    .then(raw_data => raw_data.slice(1))
+    .then(data => {
+      targetElement.append(...data.map(eventDict => makeEventDiv(eventDict)));
+    });
+}
+
+/**
+ * Helper function of `displayEvents`
+ * Make an HTML element that contains info about a single event
+ * ```{HTML}
+ * <div> <!-- this is eventWrapperDiv -->
+ *   <img src={eventDict.image}/>
+ *   <div> <!-- this is miniDiv -->
+ *     <h2>{eventDict.name}</h2> <!-- this is name -->
+ *     <p>{eventDict.explanation}</p> <!-- this is exp -->
+ *   </div>
+ * </div>
+ * ```
+ *
+ * Preconditions:
+ *  @param {JSON} eventDict is a valid event dictionary with three string key-value pairs: name, explanation, image. Refer to social-events.json for more details.
+ */
+const makeEventDiv = eventDict => {
+  if (!eventDict) throw MediaError;
+
+  // create img element
+  const image = document.createElement('img');
+  image.src = eventDict.image;
+
+  // create h2 element
+  const name = document.createElement('h2');
+  name.append(eventDict.name);
+
+  // create p element
+  const exp = document.createElement('p');
+  exp.innerHTML = eventDict.explanation;
+
+  // create h2 + p wrapper div element, append.
+  const miniDiv = document.createElement('div');
+  miniDiv.append(name, exp);
+
+  // create parent div element
+  const eventWrapperDiv = document.createElement('div');
+  eventWrapperDiv.append(image, miniDiv);
+
+  return eventWrapperDiv;
+};
+
+// SPONSORS
+
+/**
+ * Using `makeSponsorDiv(sponsorDict)`, construct sponsor cell items based on sponsor-info.json and update the DOM.
+ */
+function displaySponsors() {
+  const targetElement = document.getElementById('sponsor-hub');
+  if (!targetElement) return;
+
+  // fetch data from sponsor-info.json
+  fetch(`/assets/sponsors/sponsor-info.json`)
+    .then(response => response.json())
+    .then(raw_data => raw_data.slice(1))
+    .then(data => {
+      targetElement.append(
+        ...data.map(sponsorDict => makeSponsorDiv(sponsorDict))
+      );
+    });
+}
+
+/**
+ * Make an HTML element that contains info about a single kcc sponsor
+ * ```{HTML}
+ * <a href={sponsorDict.mapLink} rel="noopener noreferrer"> <!-- this is wrapperAnchorDiv -->
+ *   <div style="background-image: url({sponsorDict.image1})"> <!-- this is parentDiv -->
+ *     <div>{sponsorDict.name}</div> <!-- this is firstChildDiv -->
+ *     <div></div> <!-- this is secondChildDiv -->
+ *   </div>
+ * </a>
+ * ```
+ *
+ * Preconditions:
+ *  @param {JSON} sponsorDict is a valid event dictionary with three string key-value pairs: name, explanation, image. Refer to social-events.json for more details.
+ */
+const makeSponsorDiv = sponsorDict => {
+  if (!sponsorDict) throw MediaError;
+
+  const firstChildDiv = document.createElement('div');
+  firstChildDiv.innerHTML = sponsorDict.name;
+
+  const secondChildDiv = document.createElement('div');
+
+  const parentDiv = document.createElement('div');
+  parentDiv.style.backgroundImage = `url(${sponsorDict.image1})`;
+  parentDiv.append(firstChildDiv, secondChildDiv);
+
+  const wrapperAnchorDiv = document.createElement('a');
+  wrapperAnchorDiv.href = sponsorDict.mapLink;
+  wrapperAnchorDiv.append(parentDiv);
+
+  return wrapperAnchorDiv;
+};
