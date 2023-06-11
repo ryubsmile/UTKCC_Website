@@ -1,16 +1,7 @@
 @font-face {
   font-family: 'TrendSansW00-Four';
-  src: url('//db.onlinewebfonts.com/t/33ca94f43a53fc634323a6fe191ffd64.eot');
-  src: url('//db.onlinewebfonts.com/t/33ca94f43a53fc634323a6fe191ffd64.eot?#iefix')
-      format('embedded-opentype'),
-    url('//db.onlinewebfonts.com/t/33ca94f43a53fc634323a6fe191ffd64.woff2')
-      format('woff2'),
-    url('//db.onlinewebfonts.com/t/33ca94f43a53fc634323a6fe191ffd64.woff')
-      format('woff'),
-    url('//db.onlinewebfonts.com/t/33ca94f43a53fc634323a6fe191ffd64.ttf')
-      format('truetype'),
-    url('//db.onlinewebfonts.com/t/33ca94f43a53fc634323a6fe191ffd64.svg#TrendSansW00-Four')
-      format('svg');
+  src: url('//db.onlinewebfonts.com/t/33ca94f43a53fc634323a6fe191ffd64.woff2')
+    format('woff2');
 }
 
 /* CSS RESET */
