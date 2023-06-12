@@ -1,16 +1,7 @@
 @font-face {
   font-family: 'TrendSansW00-Four';
-  src: url('//db.onlinewebfonts.com/t/33ca94f43a53fc634323a6fe191ffd64.eot');
-  src: url('//db.onlinewebfonts.com/t/33ca94f43a53fc634323a6fe191ffd64.eot?#iefix')
-      format('embedded-opentype'),
-    url('//db.onlinewebfonts.com/t/33ca94f43a53fc634323a6fe191ffd64.woff2')
-      format('woff2'),
-    url('//db.onlinewebfonts.com/t/33ca94f43a53fc634323a6fe191ffd64.woff')
-      format('woff'),
-    url('//db.onlinewebfonts.com/t/33ca94f43a53fc634323a6fe191ffd64.ttf')
-      format('truetype'),
-    url('//db.onlinewebfonts.com/t/33ca94f43a53fc634323a6fe191ffd64.svg#TrendSansW00-Four')
-      format('svg');
+  src: url('//db.onlinewebfonts.com/t/33ca94f43a53fc634323a6fe191ffd64.woff2')
+    format('woff2');
 }
 
 /* CSS RESET */
@@ -69,6 +60,11 @@ body {
   min-height: 100vh;
   overflow: hidden;
   position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 p {
@@ -185,70 +181,31 @@ nav a {
   border-right: none;
 }
 
+.links .nav-item.active {
+  border-style: solid;
+  border-color: var(--main-theme-color);
+  border-left: none;
+  border-right: none;
+}
+
 /* article section */
 
 main {
   height: 100%;
 }
 
-.gallery {
-  margin: 2vw;
-  border: 1px solid #ccc;
-  float: left;
-  width: 30vw;
-}
-
-.gallery:hover {
-  border: 1px solid;
-}
-
-.gallery img {
-  width: 100%;
-  height: 50vh;
-  object-fit: cover;
-}
-
-.desc {
-  padding: 15px;
-  text-align: center;
-}
-
-.center {
-  display: block;
-  float: left;
-  margin-left: 15vw;
-  width: 100%;
-  padding: 0px;
-}
-
-.sponsor_package {
-  float: left;
-  background-color: black;
-  padding: 80px;
-  color: white;
-  width: 100%;
-}
-
-.button {
-  border: 2px solid white;
-  border-radius: 12px;
-  padding: 10px;
-  color: white;
-  font-size: 16px;
-  background-color: black;
-}
-
-.main .slide {
+main .slide {
   height: 100%;
+  text-align: center;
   /* border: 3px solid red; */
 }
 
-.main .slide.active {
+main .slide.active {
   display: block;
 }
 
-.main .slide.inactive {
-  display: none;
+main .slide.inactive {
+  display: none !important;
 }
 
 /* the first page a visiter sees */
@@ -316,12 +273,12 @@ main {
 }
 
 .page-intro .about-us-text-box {
-  padding: 0 19% 100px;
+  padding: 100px 19% 100px;
   text-align: left;
 }
 
 .about-us-text-box .intro-title {
-  padding: 40px 0;
+  padding-bottom: 40px;
 }
 
 .page-intro.grid {
@@ -415,16 +372,21 @@ main {
   gap: 40px;
 }
 
-/* article - exec */
+/* article - slide */
 
-.executives .centered-title {
+.subpage-title {
   text-align: center;
   font-weight: bold;
   font-size: 40px;
   color: inherit;
+  margin-bottom: 20px;
 }
 
-.exec-list {
+.subpage-exp {
+  color: black;
+}
+
+.subpage-list {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -433,7 +395,7 @@ main {
   margin-top: 50px;
 }
 
-.exec-list .exec-dept {
+.subpage-list .subpage-links {
   cursor: pointer;
   padding: 30px 10px;
   border: solid var(--main-theme-color) 1px;
@@ -441,67 +403,281 @@ main {
   font-size: 20px;
 }
 
-/* ? */
+/* article - executives */
 
-#title2 {
-  font-family: 'raleway';
-  font-size: 40px;
-  color: inherit;
-  margin: 40px;
-  text-align: center;
-  padding: 20px;
+.president-member {
+  background-color: rgb(249, 249, 249);
+  padding: 2vw;
+  margin: 1vw;
+  min-width: 40vw;
+  max-width: 400px;
+
+  display: grid;
+  grid-template-areas:
+    'a b'
+    'd f'
+    'e e';
+
+  grid-template-columns: 4fr 6fr;
+  grid-auto-rows: min-content;
+  text-align: left;
+  gap: 2em;
 }
 
-#p1 {
-  font-size: 20px;
-  color: black;
-  font-family: 'raleway-semibold', Calibri, 'Trebuchet MS', sans-serif;
-  margin-left: 17vw;
+.president-member img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  width: 100%;
+  height: min-content;
+  border-radius: 50%;
+  grid-area: a;
+}
+
+.president-member .nameProgram {
+  grid-area: b;
+  align-self: flex-end;
+}
+
+.president-member .position {
+  text-align: center;
+  grid-area: d;
+  align-self: flex-end;
+}
+
+.president-member .greetings {
+  grid-area: e;
+  color: rgb(0, 48, 91);
+  text-align: justify;
+}
+
+.member-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.member {
+  margin: 5vw;
+  display: flex;
+  flex-flow: column;
+}
+
+.member img {
+  aspect-ratio: 1/1;
+  max-width: 20vw;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.member div {
+  max-width: 20vw;
 }
 
 /* article - events */
 
-.events .social {
+.event-cells {
   width: 92vw;
   margin: 10px auto 0;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3, 1fr);
   gap: 4vw;
+  text-align: justify;
 }
 
-.social > div {
+.event-cells > div {
+  place-content: center center;
   width: 28vw;
-  height: 70vw;
+  min-height: 70vw;
   box-shadow: 0px 15px 30px #bebebe;
 }
 
-.social > div > img {
+.event-cells > div > img {
   width: 28vw;
   height: 28vw;
   object-fit: cover;
 }
 
-.social > div > div {
+.event-cells > div > div {
   margin: 20px;
   color: black;
 }
 
-.social > div > div > h2 {
+.event-cells > div > div > h2 {
   text-align: left;
   margin: 0 0 10px;
 }
 
-.social > div > div > p {
+.event-cells > div > div > p {
   font-size: 1em;
   color: #000000aa;
 }
 
+/* article - sponsors */
+
+.sponsors h2 {
+  color: black;
+  font-weight: normal;
+}
+
+.sponsor-cells {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: max-content;
+  margin: 50px auto;
+  gap: 50px;
+}
+
+.sponsor-cells > a > div {
+  place-content: center center;
+  width: 30vw;
+  height: 30vw;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: white;
+  background-color: transparent;
+  font-weight: bold;
+}
+
+.sponsor-cells > a > div:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.sponsor-cells > a > div > div {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px;
+  margin: auto;
+  color: inherit;
+  z-index: 99;
+}
+
+.sponsor-cells > a > div > div ~ div {
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  position: absolute;
+  z-index: 98;
+}
+
+.sponsor-package {
+  background-color: black;
+  color: white;
+  margin: 20px 0;
+  padding: 50px 0;
+}
+
+.sponsor-package > .sponsor-interest {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.sponsor-package hr {
+  width: 40%;
+  margin: 20px auto;
+}
+
+.sponsor-package .sponsor-button {
+  display: inline-block;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 10px;
+  color: white;
+  margin: 10px 10px;
+  padding: 10px 20px;
+  transition-duration: 0.3s;
+}
+
+.sponsor-package .sponsor-button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* article - newsletter */
+
+.pdf-view {
+  width: 60vw;
+  height: 60vw;
+  margin: 50px auto;
+}
+
+/* article - resources */
+
+/* FAQ section */
+
+.faq-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hr-line {
+  width: 60%;
+  margin: auto;
+  color: black;
+}
+
+.faq-box {
+  width: 60%;
+  margin: auto;
+}
+
+.faq-question {
+  font-size: 20px;
+  color: #1d1d1d;
+  cursor: pointer;
+  padding: 30px 0;
+  border: none;
+  outline: none;
+  margin: auto;
+  transition-duration: 0.4s;
+}
+
+.faq-body {
+  margin: auto;
+  /* text-align: center; */
+  padding: auto;
+  margin: 0 30px 30px;
+  display: none;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.faq-active,
+.faq-question:hover {
+  background-color: #f9f9f9;
+}
+
+/* Style the faq-page panel. Note: hidden by default */
+.faq-active .faq-body {
+  background-color: white;
+  display: block;
+}
+
+.faq-question:after {
+  content: '\02714';
+  /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #1d1d1d;
+  float: right;
+  margin-right: 30px;
+}
+
+.faq-active .faq-question:after {
+  content: '\2716';
+  /* Unicode character for "minus" sign (-) */
+}
+
 /* join our newsletter */
 
-section.newsletter {
+section.join-newsletter {
   background-color: transparent;
   text-align: center;
   min-height: 300px;
+  /* margin-top: 30px; */
 }
 
 .form-box {
@@ -511,8 +687,9 @@ section.newsletter {
   gap: 30px;
 }
 
-.newsletter hr.bar {
-  width: 100%;
+section.join-newsletter hr.bar {
+  width: 60vw;
+  margin-bottom: 20px;
   border: solid 1px var(--main-theme-color);
 }
 

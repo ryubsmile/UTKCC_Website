@@ -1,6 +1,6 @@
 # UTKCC Website
 
-This repository is for hosting the website of UTKCC, `University of Toronto: Korean Commerce Community` via GitHub Pages. 
+This repository is for hosting the website of UTKCC, `University of Toronto: Korean Commerce Community` via GitHub Pages.
 
 ## Instructions for future website admins
 
@@ -10,24 +10,25 @@ Unless a completely new feature is needed, most contents can be modified by edit
 
 #### Social Events:
 
-Navigate to `./events/social-events.json`. This is a JSON file which stores information about social events; `app.js` automatically fetches data from here and renders the social events page. 
+Navigate to `./events/social-events.json`. This is a JSON file which stores information about social events; `app.js` automatically fetches data from here and renders the social events page.
 
-* Adding a new social event
-  1. The default (and preferred) image ratio is 1:1. Prepare this file and add to the folder `./img/events/`. 
+- Adding a new social event
+
+  1. The default (and preferred) image ratio is 1:1. Prepare this file and add to the folder `./img/events/`.
   2. Make a dictionary with the following format:
      ```js
        {
          "name": "<<put the name of the event here>>",
          "image": "./img/events/<<name of the image file>>",
-         "explanation": "<<explanation of the event>>" 
+         "explanation": "<<explanation of the event>>"
        }
      ```
      - Line breaks in here must be replaced with `<br>`s and should be written in a single line.
      - Do NOT include <<>>. Put in texts only.
-  3. Append (copy and paste) to the bottom of the dictionary. Don't forget to add a `,` before the new dictionary. 
+  3. Append (copy and paste) to the bottom of the dictionary. Don't forget to add a `,` before the new dictionary.
      ```js
        {
-         "Events": [ 
+         "Events": [
            ... other events ,
            {
              "name": "Social Event 1",
@@ -38,11 +39,22 @@ Navigate to `./events/social-events.json`. This is a JSON file which stores info
        }
      ```
 
-* Removing an existing social event
-  
-  Remove the code chunk that corresponds to the event. Note, the very first social event object (that is meant to work as an example, hence ignored by `app.js`) should not be removed. 
+- Removing an existing social event
+
+  Remove the code chunk that corresponds to the event. Note, the very first social event object (that is meant to work as an example, hence ignored by `app.js`) should not be removed.
+
+## Rooms for future improvement
+
+- js to react
+
+- serverless -> server via next.js, backend, notion, google spreadsheet API, etc...
+
+- using fetch + onclick, make initial loading lazier (fetch files only when clicked.)
+
+- automate executives page after backend implementation using LinkedIn API
 
 ## Authors
+
 16th (2022-23):
 [@ryubsmile](https://www.github.com/ryubsmile)
 [@JustKim04](https://www.github.com/JustKim04)
