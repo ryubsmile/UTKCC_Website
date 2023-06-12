@@ -403,6 +403,76 @@ main .slide.inactive {
   font-size: 20px;
 }
 
+/* article - executives */
+
+.president-member {
+  background-color: rgb(249, 249, 249);
+  padding: 2vw;
+  margin: 1vw;
+  min-width: 40vw;
+  max-width: 400px;
+
+  display: grid;
+  grid-template-areas:
+    'a b'
+    'd f'
+    'e e';
+
+  grid-template-columns: 4fr 6fr;
+  grid-auto-rows: min-content;
+  text-align: left;
+  gap: 2em;
+}
+
+.president-member img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  width: 100%;
+  height: min-content;
+  border-radius: 50%;
+  grid-area: a;
+}
+
+.president-member .nameProgram {
+  grid-area: b;
+  align-self: flex-end;
+}
+
+.president-member .position {
+  text-align: center;
+  grid-area: d;
+  align-self: flex-end;
+}
+
+.president-member .greetings {
+  grid-area: e;
+  color: rgb(0, 48, 91);
+  text-align: justify;
+}
+
+.member-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.member {
+  margin: 5vw;
+  display: flex;
+  flex-flow: column;
+}
+
+.member img {
+  aspect-ratio: 1/1;
+  max-width: 20vw;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.member div {
+  max-width: 20vw;
+}
+
 /* article - events */
 
 .event-cells {

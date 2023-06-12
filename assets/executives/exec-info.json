@@ -4,181 +4,167 @@
     "Position": "직책",
     "Name": "홍길동",
     "LinkedIn": "https://www.linkedin.com/in/hong-gil-dong/",
-    "Major": "Smth & Smth"
-  },
-  {
-    "Dept": "President",
-    "Position": "President",
-    "Name": "강서현",
-    "LinkedIn": "https://www.linkedin.com/in/seohyun-kang-516418220/",
-    "Major": "Statistics, Mathematics and Environmental Studies"
-  },
-  {
-    "Dept": "President",
-    "Position": "Vice-president",
-    "Name": "한수예",
-    "LinkedIn": "https://www.linkedin.com/in/eden-suye-han-661224223",
-    "Major": "Statistics"
+    "Program": "Smth & Smth"
   },
   {
     "Dept": "Social",
     "Position": "Director",
     "Name": "김보경",
     "LinkedIn": "",
-    "Major": "Econ & Stat"
+    "Program": "Econ & Stat"
   },
   {
     "Dept": "Social",
     "Position": "Committee",
     "Name": "이기서",
     "LinkedIn": "",
-    "Major": "Financial Economics specialist"
+    "Program": "Financial Economics specialist"
   },
   {
     "Dept": "Social",
     "Position": "Committee",
     "Name": "신예서",
     "LinkedIn": "",
-    "Major": "Economics"
+    "Program": "Economics"
   },
   {
     "Dept": "Social",
     "Position": "Committee",
     "Name": "김준수",
     "LinkedIn": "",
-    "Major": "Statistics"
+    "Program": "Statistics"
   },
   {
     "Dept": "Academic",
     "Position": "Director",
     "Name": "이수나",
     "LinkedIn": "https://www.linkedin.com/in/suna-lee-8344a6220/",
-    "Major": "Rotman Commerce"
+    "Program": "Rotman Commerce"
   },
   {
     "Dept": "Academic",
     "Position": "Committee",
     "Name": "전재민",
     "LinkedIn": "https://www.linkedin.com/in/justinjaeminjun/",
-    "Major": "Rotman Commerce"
+    "Program": "Rotman Commerce"
   },
   {
     "Dept": "Academic",
     "Position": "Committee",
     "Name": "이은서",
     "LinkedIn": "https://www.linkedin.com/in/eunseo-lee-715435216",
-    "Major": "Economics and Statistics"
+    "Program": "Economics and Statistics"
   },
   {
     "Dept": "External Relations",
     "Position": "Director",
     "Name": "심유진",
     "LinkedIn": "https://www.linkedin.com/in/yujin-shim-828b21234",
-    "Major": "Statistics"
+    "Program": "Statistics"
   },
   {
     "Dept": "External Relations",
     "Position": "Committee",
     "Name": "배정훈",
     "LinkedIn": "",
-    "Major": "Economics & Health studies major and Statistics minor"
+    "Program": "Economics & Health studies program and Statistics minor"
   },
   {
     "Dept": "External Relations",
     "Position": "Committee",
     "Name": "진예령",
     "LinkedIn": "",
-    "Major": "Kinesiology and Physical Education"
+    "Program": "Kinesiology and Physical Education"
   },
   {
     "Dept": "Marketing",
     "Position": "Director",
     "Name": "김소현",
     "LinkedIn": "https://www.linkedin.com/in/sohyun-kim-121573226/",
-    "Major": "Economics"
+    "Program": "Economics"
   },
   {
     "Dept": "Marketing",
     "Position": "Committee",
     "Name": "오하린",
     "LinkedIn": "",
-    "Major": "Rotman Commerce"
+    "Program": "Rotman Commerce"
   },
   {
     "Dept": "Marketing",
     "Position": "Committee",
     "Name": "조은비",
     "LinkedIn": "https://www.linkedin.com/in/eunbi-cho-70b854257/",
-    "Major": "Economics and Statistics"
+    "Program": "Economics and Statistics"
   },
   {
     "Dept": "Marketing",
     "Position": "Committee",
     "Name": "임윤아",
     "LinkedIn": "",
-    "Major": "Rotman Commerce"
+    "Program": "Rotman Commerce"
   },
   {
     "Dept": "Marketing",
     "Position": "Committee",
     "Name": "유현준",
     "LinkedIn": "www.linkedin.com/in/hyunjunyou",
-    "Major": "Rotman Commerce"
+    "Program": "Rotman Commerce"
   },
   {
     "Dept": "Finance",
     "Position": "Director",
     "Name": "정윤서",
     "LinkedIn": "https://www.linkedin.com/in/chloe-jung-55b1b5172",
-    "Major": "Rotman Commerce"
+    "Program": "Rotman Commerce"
   },
   {
     "Dept": "Finance",
     "Position": "Committee",
     "Name": "강민서",
     "LinkedIn": "https://www.linkedin.com/in/lauren-kang-92149a24b/",
-    "Major": "Economics and IRHR"
+    "Program": "Economics and IRHR"
   },
   {
     "Dept": "Finance",
     "Position": "Committee",
     "Name": "홍윤재",
     "LinkedIn": "https://www.linkedin.com/in/yoon-jae-hong-418858139/",
-    "Major": "Rotman Commerce"
+    "Program": "Rotman Commerce"
   },
   {
     "Dept": "Media",
     "Position": "Director",
     "Name": "지가형",
     "LinkedIn": "",
-    "Major": "Criminology and Sociological Studies & Ethics"
+    "Program": "Criminology and Sociological Studies & Ethics"
   },
   {
     "Dept": "Media",
     "Position": "Committee",
     "Name": "이지현",
     "LinkedIn": "https://www.linkedin.com/in/lucy-lee-056402256",
-    "Major": "Computer Science and Statistics"
+    "Program": "Computer Science and Statistics"
   },
   {
     "Dept": "Media",
     "Position": "Committee",
     "Name": "조예은",
     "LinkedIn": "",
-    "Major": "Math and Statistics"
+    "Program": "Math and Statistics"
   },
   {
     "Dept": "Programming",
     "Position": "Director",
     "Name": "김진건",
     "LinkedIn": "https://www.linkedin.com/in/justin-kim-a47306212/",
-    "Major": "Rotman Commerce"
+    "Program": "Rotman Commerce"
   },
   {
     "Dept": "Programming",
     "Position": "Committee",
     "Name": "류재혁",
     "LinkedIn": "",
-    "Major": "Statistics and Computer Science"
+    "Program": "Statistics and Computer Science"
   }
 ]

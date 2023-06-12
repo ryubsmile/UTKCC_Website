@@ -209,12 +209,15 @@ function displayExecutives() {
     .then(response => response.json())
     .then(raw_data => raw_data.slice(1)) // to ignore the first example obj
     .then(data => {
+      // map the json file into easier format
       const execByDept = {};
 
       for (const singleExec of data) {
         if (!execByDept.hasOwnProperty(singleExec.Dept)) {
           execByDept[singleExec.Dept] = {
-            entireDept: [],
+            Director: [],
+            Committee: [],
+            Intern: [],
           };
         }
 
@@ -223,23 +226,82 @@ function displayExecutives() {
           singleDept[singleExec.Position] = [];
         }
 
-        singleDept.entireDept.push(singleExec);
         singleDept[singleExec.Position].push(singleExec);
       }
 
       return execByDept;
+    })
+    .then(data => {
+      for (const deptName in data) {
+        displayDept(deptName, data[deptName]);
+      }
     });
 }
 
-function displayDept(deptName) {
-  // if it's not president,
-  const targetElement = document.getElementById(deptName);
+function displayPresidents() {}
+
+function displayDept(deptName, deptData) {
+  console.log(deptName);
+  const targetElement = document.getElementById(
+    `dept-${deptName.replaceAll(' ', '-')}`
+  );
+
+  const directorRow = document.createElement('div');
+  directorRow.classList.add('member-row');
+  directorRow.append(...deptData.Director.map(makeSingleExecElement));
+
+  const committeeRow = document.createElement('div');
+  committeeRow.classList.add('member-row');
+  committeeRow.append(...deptData.Committee.map(makeSingleExecElement));
+
+  const internRow = document.createElement('div');
+  internRow.classList.add('member-row');
+  internRow.append(...deptData.Intern.map(makeSingleExecElement));
+
+  targetElement.append(directorRow, committeeRow, internRow);
 }
+
+/**
+ * single member information is as such:
+ * ```ts
+ * {
+ *    "Dept": "부서",
+ *    "Position": "직책",
+ *    "Name": "홍길동",
+ *    "Programs": "Smth & Smth"
+ *    "LinkedIn"?: "https://www.linkedin.com/in/hong-gil-dong/",
+ * }
+ * ```
+ * and div is created as such:
+ * ```html
+ * <div class="member">
+ *   <img src="./assets/executives/exec-headshots/홍길동.png" />
+ *   <div class="position">President</div>
+ *   <div class="name">홍길동</div>
+ *   <div class="program">Smth & Smth</div>
+ * </div>
+ * ```
+ */
+const makeSingleExecElement = memberInfo => {
+  if (!memberInfo) throw MediaError;
+
+  const memberElement = document.createElement('div');
+  memberElement.classList.add('member');
+
+  memberElement.innerHTML = `
+    <img src="./assets/executives/exec-headshots/${memberInfo.Name}.png" />
+    <div class="position">${memberInfo.Position}</div>
+    <div class="name">${memberInfo.Name}</div>
+    <div class="program">${memberInfo.Program}</div>
+  `;
+
+  return memberElement;
+};
 
 // EVENTS
 
 /**
- * Using `makeEventDiv(eventDict)`, construct event items based on social-events.json and update the DOM.
+ * Using `makeEventElement(eventDict)`, construct event items based on social-events.json and update the DOM.
  * @param {String} eventId is one of social, professional, academic
  */
 function displayEvents(eventId) {
@@ -251,7 +313,9 @@ function displayEvents(eventId) {
     .then(response => response.json())
     .then(raw_data => raw_data.slice(1))
     .then(data => {
-      targetElement.append(...data.map(eventDict => makeEventDiv(eventDict)));
+      targetElement.append(
+        ...data.map(eventDict => makeEventElement(eventDict))
+      );
     });
 }
 
@@ -271,7 +335,7 @@ function displayEvents(eventId) {
  * Preconditions:
  *  @param {JSON} eventDict is a valid event dictionary with three string key-value pairs: name, explanation, image. Refer to social-events.json for more details.
  */
-const makeEventDiv = eventDict => {
+const makeEventElement = eventDict => {
   if (!eventDict) throw MediaError;
 
   // create img element
@@ -300,7 +364,7 @@ const makeEventDiv = eventDict => {
 // SPONSORS
 
 /**
- * Using `makeSponsorDiv(sponsorDict)`, construct sponsor cell items based on sponsor-info.json and update the DOM.
+ * Using `makeSponsorElement(sponsorDict)`, construct sponsor cell items based on sponsor-info.json and update the DOM.
  */
 function displaySponsors() {
   const targetElement = document.getElementById('sponsor-hub');
@@ -312,7 +376,7 @@ function displaySponsors() {
     .then(raw_data => raw_data.slice(1))
     .then(data => {
       targetElement.append(
-        ...data.map(sponsorDict => makeSponsorDiv(sponsorDict))
+        ...data.map(sponsorDict => makeSponsorElement(sponsorDict))
       );
     });
 }
@@ -331,7 +395,7 @@ function displaySponsors() {
  * Preconditions:
  *  @param {JSON} sponsorDict is a valid event dictionary with three string key-value pairs: name, explanation, image. Refer to social-events.json for more details.
  */
-const makeSponsorDiv = sponsorDict => {
+const makeSponsorElement = sponsorDict => {
   if (!sponsorDict) throw MediaError;
 
   const firstChildDiv = document.createElement('div');
