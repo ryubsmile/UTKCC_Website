@@ -68,7 +68,7 @@ const updateAnchorRel = () => {
 
 function startUpdateSponsor() {
   // Gets data from sponsor-info.json
-  fetch(`/assets/sponsors/sponsor-info.json`)
+  fetch(`./assets/sponsors/sponsor-info.json`)
     .then(response => response.json())
     .then(raw_data => raw_data.slice(1))
     .then(data => {
@@ -205,7 +205,7 @@ function toggleClassState(element, className) {
 // EXECUTIVES
 
 function displayExecutives() {
-  fetch(`/assets/executives/exec-info.json`)
+  fetch(`./assets/executives/exec-info.json`)
     .then(response => response.json())
     .then(raw_data => raw_data.slice(1)) // to ignore the first example obj
     .then(data => {
@@ -309,7 +309,7 @@ function displayEvents(eventId) {
   if (!targetElement) return;
 
   // Gets data from {eventId}-events.json
-  fetch(`/assets/events/${eventId}-events.json`)
+  fetch(`./assets/events/${eventId}-events.json`)
     .then(response => response.json())
     .then(raw_data => raw_data.slice(1))
     .then(data => {
@@ -371,7 +371,7 @@ function displaySponsors() {
   if (!targetElement) return;
 
   // fetch data from sponsor-info.json
-  fetch(`/assets/sponsors/sponsor-info.json`)
+  fetch(`./assets/sponsors/sponsor-info.json`)
     .then(response => response.json())
     .then(raw_data => raw_data.slice(1))
     .then(data => {
