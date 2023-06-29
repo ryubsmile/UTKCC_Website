@@ -81,7 +81,6 @@ function repeatUpdateSponsor(data, sponsor_photo_index = 0) {
   updateSponsorPhoto(data, sponsor_photo_index);
 
   // update slide index
-  console.log(sponsor_photo_index);
   if (++sponsor_photo_index >= data.length) {
     sponsor_photo_index = 0;
   }

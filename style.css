@@ -1,7 +1,50 @@
 @font-face {
-  font-family: 'TrendSansW00-Four';
-  src: url('//db.onlinewebfonts.com/t/33ca94f43a53fc634323a6fe191ffd64.woff2')
-    format('woff2');
+  font-family: 'S-Core Dream';
+  font-style: normal;
+  src: url('./assets/fonts/S-Core_Dream_OTF/SCDream6.otf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'S-Core Dream';
+  font-style: normal;
+  src: url('./assets/fonts/S-Core_Dream_OTF/SCDream6.otf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'S-Core Dream';
+  font-style: normal;
+  src: url('./assets/fonts/S-Core_Dream_OTF/SCDream1.otf');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'S-Core Dream';
+  font-style: normal;
+  src: url('./assets/fonts/S-Core_Dream_OTF/SCDream2.otf');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'S-Core Dream';
+  font-style: normal;
+  src: url('./assets/fonts/S-Core_Dream_OTF/SCDream3.otf');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'S-Core Dream';
+  font-style: normal;
+  src: url('./assets/fonts/S-Core_Dream_OTF/SCDream4.otf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'S-Core Dream';
+  font-style: normal;
+  src: url('./assets/fonts/S-Core_Dream_OTF/SCDream5.otf');
+  font-weight: 500;
 }
 
 /* CSS RESET */
@@ -44,8 +87,8 @@ body {
   border: none;
   user-select: none;
   color: var(--main-theme-color);
-  font-family: 'Raleway', 'Franklin Gothic Medium', 'Arial Narrow', Arial,
-    sans-serif;
+  font-family: 'S-Core Dream', 'Raleway', 'Franklin Gothic Medium',
+    'Arial Narrow', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   user-select: none;
@@ -74,6 +117,11 @@ p {
   font-size: 10pt;
   font-weight: 400;
   line-height: 2em;
+  /* text-align: justify; */
+}
+
+.centered-text {
+  text-align: center;
 }
 
 .vertical-center {
@@ -238,14 +286,13 @@ main .slide.inactive {
 }
 
 #title {
-  font-family: 'TrendSansW00-Four', 'arial';
+  font-family: 'S-Core Dream';
   font-size: 80px;
   color: #000;
   text-align: center;
 }
 
 #motto {
-  font-family: 'raleway';
   font-weight: bold;
   font-size: 30px;
   text-align: center;
@@ -627,7 +674,7 @@ main .slide.inactive {
 }
 
 .faq-question {
-  font-size: 20px;
+  font-size: 15px;
   color: #1d1d1d;
   cursor: pointer;
   padding: 30px 0;
